@@ -1,0 +1,8 @@
+# System dependencies required for building the LaTeX CV
+# To install: sudo apt update && xargs -a apt-requirements.txt sudo apt install -y
+
+texlive-latex-extra
+texlive-fonts-extra
+texlive-bibtex-extra
+latexmk
+biber
