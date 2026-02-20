@@ -15,18 +15,21 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: cv
+      - name: Build One Page CV
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{ env.FILE }}
-          working_directory: ${{ env.DIR }}
+          root_file: one-page-cv
+      - name: Build Multi Page CV
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: multi-page-cv
       - name: move
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
-      - name: Upload pdf as artifact
+        run: mkdir -p github_artifacts && mv *.pdf ./github_artifacts/
+      - name: Upload PDFs as artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILE }}.pdf
-          path: ./github_artifacts
+          name: cv-pdfs
+          path: ./github_artifacts/*.pdf
   deploy:
     needs: [build]
     runs-on: ubuntu-latest

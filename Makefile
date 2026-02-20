@@ -1,10 +1,13 @@
-NAME=cv
+all: one-page-cv.pdf multi-page-cv.pdf
 
-all:
-	latexmk -pdf ${NAME}.tex
+one-page-cv.pdf: one-page-cv.tex
+	latexmk -pdf one-page-cv.tex
+
+multi-page-cv.pdf: multi-page-cv.tex
+	latexmk -pdf multi-page-cv.tex
 
 clean:
-	rm -f ${NAME}.aux ${NAME}.bbl ${NAME}.bcf ${NAME}.fdb_latexmk ${NAME}.fls ${NAME}.log ${NAME}.out ${NAME}.run.xml ${NAME}.blg ${NAME}.toc *\~
+	rm -f *.aux *.bbl *.bcf *.fdb_latexmk *.fls *.log *.out *.run.xml *.blg *.toc *~
 
 distclean: clean
-	rm -f ${NAME}.pdf
+	rm -f one-page-cv.pdf multi-page-cv.pdf

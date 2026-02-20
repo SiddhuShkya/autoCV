@@ -1,0 +1,225 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Siddhartha Shakya} \\[7.5pt]
+\href{https://github.com/SiddhuShkya}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \ 
+\href{https://www.linkedin.com/in/siddhartha-shakya-5665a0236/}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \ $|$ \ 
+\href{mailto:siddhuushakyaa@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ siddhuushakyaa@gmail.com} \ $|$ \ 
+\href{tel:+977 9810367988}{\raisebox{-0.05\height}\faMobile \ +977 9810367988} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+AI \& Data Engineering graduate with hands-on experience in ML development, ETL pipeline orchestration, and MLOps. Demonstrated ability to build end-to-end solutions through an AI internship and independent projects spanning data engineering, NLP, and model deployment. Eager to contribute and grow in a junior Data Engineer or ML Engineer role.
+
+%Experience
+\section{Work Experience}
+\begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{Oct 2025 - Feb 2026}
+\item Built Streamlit dashboard for environmental monitoring using Landsat-8, performing time series analysis on vegetation indices, land surface temperature, and urbanization patterns.
+\item Researched ML approaches for Above Ground Biomass estimation using Sentinel-2 imagery via Google Earth Engine API, evaluating regression models for biomass prediction from remote sensing data.
+\end{joblong}
+
+\begin{joblong}{Graduate Teaching Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{Aug 2024 - Sep 2025}
+\item Led workshop sessions on parallel computing and performance optimization, covering parallel programming paradigms and GPU computing. 
+\item Conducted tutorials on Big Data technologies along with practical labs covering Hadoop ecosystem, MapReduce programming, distributed data processing frameworks, and real-time streaming. Guided students through implementation exercises involving large-scale data analysis and processing techniques.
+\end{joblong}
+%Projects
+\vspace{-15pt}
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Weather ETL Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Extract-Transform-Load}{Repo Link} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Automated ETL pipeline using Docker Compose to orchestrate data ingestion and loading into PostgreSQL, achieving 100\% reliability. \textbf{Tech:} Airflow, Python, PostgreSQL, Docker.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Movie Recommendation System} & \hfill \href{https://github.com/SiddhuShkya/Movie-Recommendation-System}{Repo Link} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Semantic engine using Transformer embeddings for 13,000+ titles. Features multi-stage Docker and automated CI/CD. \textbf{Tech:} FastAPI, HuggingFace, Scikit-learn, Docker, GitHub Actions.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Text Summarization MLOps} & \hfill \href{https://github.com/SiddhuShkya/Text-Summarizer-With-HF}{Repo Link} \\[2pt]
+\multicolumn{2}{@{}X@{}}{Automated NLP pipeline for long-form text summaries via multi-stage MLOps workflow. \textbf{Tech:} PyTorch, HuggingFace, FastAPI, Docker, CI/CD.}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2026 - pres. & PG Diploma in Data Science, \textbf{Manipal University} \\
+2022 - 2024 & BSc (Hons) Computer Science, \textbf{Herald College} \hfill (First Class Honors) \\ 
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{}l X r@{}}
+\textbf{The Complete SQL Bootcamp: Zero to Hero} & \normalsize{Udemy} & \hfill 2026 \\
+\textbf{Complete MLOps Bootcamp} & \normalsize{Udemy} & \hfill 2026 \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Programming Languages} &  \normalsize{Python, SQL, Java, C/C++, Bash/Shell}\\
+\textbf{Databases} &  \normalsize{PostgreSQL, MongoDB, MySQL, Redis}\\ 
+\textbf{Cloud Platforms} &  \normalsize{AWS, Google Cloud Platform (GCP)}\\
+\textbf{AI \& ML Frameworks} &  \normalsize{PyTorch, HuggingFace Transformers, Keras, Scikit-learn}\\
+\textbf{Data Visualization \& BI} &  \normalsize{Matplotlib, Seaborn, Plotly, Excel}\\
+\textbf{Data Engineering} &  \normalsize{Apache Airflow, Apache Spark, Hadoop, ETL Pipelines, Pandas}\\
+\textbf{DevOps \& MLOps} &  \normalsize{Docker, Docker Compose, Git, GitHub Actions (CI/CD), MLflow, DVC, YAML}\\
+\end{tabularx}
+
+\vfill
+\begin{center}
+\footnotesize Last updated: \today
+\end{center}
+
+\end{document}
