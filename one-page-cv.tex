@@ -54,7 +54,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.91]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -139,12 +139,12 @@
 % \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
 % \end{tabularx}
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Siddhartha Shakya} \\[7.5pt]
+\begin{tabularx}{\linewidth}{@{} C @{}} \Huge{Siddhartha Shakya} \\[7.5pt] 
 \href{https://github.com/SiddhuShkya}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \ 
 \href{https://www.linkedin.com/in/siddhartha-shakya-5665a0236/}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \ $|$ \ 
 \href{mailto:siddhuushakyaa@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ siddhuushakyaa@gmail.com} \ $|$ \ 
-\href{tel:+977 9810367988}{\raisebox{-0.05\height}\faMobile \ +977 9810367988} \\
+\href{tel:+971548889367}{\raisebox{-0.05\height}\faMobile \ +971 548889367} \ $|$ \ 
+\href{https://maps.google.com/?q=International+City,+Dubai}{\raisebox{-0.05\height}\faMapMarker \ Dubai, International City}
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -162,13 +162,14 @@ learning. Looking to bring these skills to an entry-level Data or AI engineering
 %----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Programming Languages} &  \normalsize{Python, SQL, Java, C/C++, Bash/Shell}\\
-\textbf{Databases} &  \normalsize{PostgreSQL, MongoDB, MySQL, Redis}\\ 
+\textbf{Programming} &  \normalsize{Python, SQL, C/C++, Bash/Shell}\\
+\textbf{Databases} &  \normalsize{PostgreSQL, MongoDB, MySQL}\\ 
 \textbf{Cloud Platforms} &  \normalsize{AWS, Google Cloud Platform (GCP)}\\
-\textbf{AI \& ML Frameworks} &  \normalsize{PyTorch, HuggingFace Transformers, Keras, Scikit-learn}\\
-\textbf{Data Visualization \& BI} &  \normalsize{Matplotlib, Seaborn, Plotly, Excel}\\
-\textbf{Data Engineering} &  \normalsize{Apache Airflow, Apache Spark, Hadoop, ETL Pipelines, Pandas}\\
-\textbf{DevOps \& MLOps} &  \normalsize{Docker, Docker Compose, Git, GitHub Actions (CI/CD), MLflow, DVC, YAML}\\
+\textbf{Data Engineering} &  \normalsize{Apache Airflow, Apache Spark, Hadoop, Pandas, NumPy}\\
+\textbf{DevOps \& MLOps} &  \normalsize{Docker, Docker Compose, Git, GitHub Actions (CI/CD), MLflow, DVC}\\
+\textbf{AI \& ML} &  \normalsize{PyTorch, HuggingFace Transformers, Scikit-learn}\\
+
+
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -177,16 +178,15 @@ learning. Looking to bring these skills to an entry-level Data or AI engineering
 
 %Experience
 \section{Work Experience}
-\begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{Oct 2025 - Feb 2026}
-\item Built Streamlit dashboard for environmental monitoring using Landsat-8, performing time series anal-
-ysis on vegetation indices, land surface temperature, and urbanization patterns.
-\item Researched ML approaches for Above Ground Biomass estimation using Sentinel-2 imagery via Google
-Earth Engine API, evaluating regression models for biomass prediction from remote sensing data.
+
+\begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{Oct 2025 -- Feb 2026}
+\item Built a Streamlit dashboard processing Landsat-8 satellite imagery across 5+ years of time series data, enabling real-time visualization of vegetation indices, land surface temperature, and urbanization patterns for environmental monitoring.
+\item Evaluated 3+ regression models (Random Forest, XGBoost, SVM) for Above Ground Biomass estimation using Sentinel-2 imagery via Google Earth Engine API, identifying XGBoost as the top performer with the lowest RMSE across test plots.
 \end{joblong}
 
-\begin{joblong}{Graduate Teaching Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{Aug 2024 - Sep 2025}
+\begin{joblong}{Graduate Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{Aug 2024 -- Sep 2025}
 \item Led workshop sessions on parallel computing and performance optimization, covering parallel programming paradigms and GPU computing. 
-\item Conducted tutorials on Big Data technologies along with practical labs covering Hadoop ecosystem, MapReduce programming, distributed data processing frameworks, and real-time streaming. Guided students through implementation exercises involving large-scale data analysis and processing techniques.
+\item Conducted tutorials on Big Data technologies along with practical labs covering Hadoop ecosystem, MapReduce programming, distributed data processing frameworks, and real-time streaming.
 \end{joblong}
 %Projects
 \vspace{-15pt}
@@ -194,8 +194,7 @@ Earth Engine API, evaluating regression models for biomass prediction from remot
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Weather ETL Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Extract-Transform-Load}{Repo Link} \\[2pt]
-\multicolumn{2}{@{}X@{}}{Developed a fully automated ETL pipeline with Apache Airflow, containerized with Docker Compose,
-loading into PostgreSQL with error-handling and deduplication logic.
+\multicolumn{2}{@{}X@{}}{Automated end-to-end ETL pipeline ingesting live weather data from the Open-Meteo API, processing and loading into PostgreSQL with deduplication logic, error handling, and retry mechanisms. Containerized with Docker Compose and orchestrated via Apache Airflow with daily DAG scheduling.
 
 \textbf{Tech Stack:} Apache Airflow, Python, PostgreSQL, PgAdmin, Docker, Docker Compose, Astronomer,
 Git, OPEN METEO API.}  \\
@@ -203,8 +202,7 @@ Git, OPEN METEO API.}  \\
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Movie Recommendation System} & \hfill \href{https://github.com/SiddhuShkya/Movie-Recommendation-System}{Repo Link} \\[2pt]
-\multicolumn{2}{@{}X@{}}{Built a content based movie recommendation engine using Transformer embeddings across 13,000+ titles,
-with multi-stage Docker deployment and automated CI/CD testing via GitHub Actions and Pytest.
+\multicolumn{2}{@{}X@{}}{ontent-based recommendation engine across 13,000+ movie titles using HuggingFace Transformer embeddings for semantic similarity, served via a FastAPI backend. Deployed with multi-stage Docker builds, achieving sub-200ms response times, with automated CI/CD testing via GitHub Actions and Pytest.
 
 \textbf{Tech Stack:} Python, HuggingFace, Scikit-learn, NLTK, FastAPI, Jinja2, Docker, Docker Compose,
 GitHub Actions (CI), Pytest, logging.}  \\
@@ -218,9 +216,7 @@ GitHub Actions (CI), Pytest, logging.}  \\
 2026 - pres. & PG Diploma in Data Science, \textbf{Manipal University} \\
 2022 - 2024 & BSc (Hons) Computer Science, \textbf{Herald College} \hfill (First Class Honors) \\ 
 \end{tabularx}
-
 \begin{center}
 \footnotesize Last updated: \today
 \end{center}
-
 \end{document}
