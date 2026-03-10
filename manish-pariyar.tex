@@ -1,0 +1,198 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,11pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.91]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{6pt}
+
+%for publications
+%\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+
+%for social icons
+%\usepackage{fontawesome5}
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}} \Huge{Manish Pariyar} \\[4pt]
+\large{Customer Service Professional $|$ Sales Executive} \\[4pt]
+\href{mailto:pariyarmansih030@gmail.com}{pariyarmansih030@gmail.com} \ $|$ \ 
+\href{tel:+971548889367}{+971 54 888 9367} \ $|$ \ 
+\href{https://www.linkedin.com/in/manish-pariyar/}{linkedin.com/in/manish-pariyar} \ $|$ \ 
+\href{https://maps.google.com/?q=Dubai,+UAE}{Dubai, UAE} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section{Professional Summary}
+Customer-focused professional with experience in aviation, international event operations, and retail sales. Skilled in delivering excellent service, assisting diverse customers, and maintaining professionalism in fast-paced environments. Strong communication skills, cultural awareness, and a service-oriented personality. Seeking an opportunity to contribute to a dynamic organization while providing high-quality customer experiences.
+
+%----------------------------------------------------------------------------------------
+%	CORE SKILLS
+%----------------------------------------------------------------------------------------
+\section{Core Skills}
+
+Customer Service Excellence, Sales \& Customer Engagement, Active Listening, Communication \& Interpersonal Skills, Cultural Intelligence, Teamwork \& Collaboration, Problem Solving, Professional Grooming \& Presentation
+
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Professional Experience}
+
+\begin{joblong}{Sales Executive $|$ \normalfont\textit{Buddha Thanka Treasure, Kathmandu}}{Sep 2023 -- Dec 2025}
+\item Assisted customers in selecting products and provided product knowledge.
+\item Maintained excellent customer service to increase satisfaction.
+\item Achieved sales targets through effective customer engagement.
+\item Maintained store presentation and organized merchandise.
+\end{joblong}
+
+\begin{joblong}{Customer Service Agent (Internship) $|$ \normalfont\textit{Civil Aviation Authority of Nepal (CAAN)}}{May 2023 -- Aug 2023}
+\item Assisted passengers with check-in guidance and boarding procedures at Tribhuvan International Airport.
+\item Provided accurate flight and airport information to travelers.
+\item Supported airport staff in maintaining smooth passenger flow.
+\item Maintained professionalism while handling passenger inquiries.
+\end{joblong}
+
+\begin{joblong}{Customer Service Agent $|$ \normalfont\textit{Urban Hospitality Service – Qatar Rail}}{Nov 2022 -- Jan 2023}
+\item Assisted international passengers with metro and travel information during FIFA World Cup 2022.
+\item Provided customer support during high passenger traffic.
+\item Managed passenger flow and ensured smooth operations.
+\item Resolved passenger concerns in a professional manner.
+\end{joblong}
+
+\begin{joblong}{Customer Service Executive $|$ \normalfont\textit{Buddha Thanka Treasure, Kathmandu}}{Jan 2019 -- Feb 2022}
+\item Provided customer assistance and handled product inquiries.
+\item Delivered excellent service to both local and international visitors.
+\item Managed customer concerns and ensured customer satisfaction.
+\item Supported daily store and sales operations.
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}X l@{}}
+\textbf{Northern Light Academy of Aviation and Technology} & 2022 \\
+Level 2 Diploma in Air Cabin Crew & \\
+\textbf{Divya Gyan College of Management} & 2019 \\
+Higher Secondary Education (+2) & \\ 
+\textbf{Divya Gyan Higher Secondary School} & 2017 \\
+School Leaving Certificate (SEE) & \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS & LANGUAGES
+%----------------------------------------------------------------------------------------
+\section{Certifications \& Languages}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Certifications} & \normalsize{Basic Fire Safety Training (2022), First Aid \& Medical Emergency Care (2022), Swimming and Ditching Drill (2022), Barista Training (2026)} \\
+\textbf{Languages} & \normalsize{Nepali (Fluent), English (Fluent), Hindi (Fluent)} \\
+\end{tabularx}
+
+
+
+\begin{center}
+\footnotesize Last updated: \today
+\end{center}
+\end{document}
