@@ -18,13 +18,15 @@ jobs:
       - name: Build One Page CV
         uses: dante-ev/latex-action@latest
         with:
-          root_file: one-page-cv
+          root_file: one-page-cv.tex
+          working_directory: src
       - name: Build Multi Page CV
         uses: dante-ev/latex-action@latest
         with:
-          root_file: multi-page-cv
+          root_file: multi-page-cv.tex
+          working_directory: src
       - name: move
-        run: mkdir -p github_artifacts && mv *.pdf ./github_artifacts/
+        run: mkdir -p github_artifacts && mv src/*.pdf ./github_artifacts/
       - name: Upload PDFs as artifacts
         uses: actions/upload-artifact@v4
         with:
