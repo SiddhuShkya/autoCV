@@ -1,13 +1,15 @@
-all: one-page-cv.pdf multi-page-cv.pdf
+all: output/one-page-cv.pdf output/multi-page-cv.pdf
 
-one-page-cv.pdf: one-page-cv.tex
-	latexmk -pdf one-page-cv.tex
+output/one-page-cv.pdf: src/one-page-cv.tex
+	./scripts/compile.sh src/one-page-cv.tex
 
-multi-page-cv.pdf: multi-page-cv.tex
-	latexmk -pdf multi-page-cv.tex
+output/multi-page-cv.pdf: src/multi-page-cv.tex
+	./scripts/compile.sh src/multi-page-cv.tex
 
 clean:
-	rm -f *.aux *.bbl *.bcf *.fdb_latexmk *.fls *.log *.out *.run.xml *.blg *.toc *~
+	rm -f build/*.aux build/*.bbl build/*.bcf build/*.blg build/*.fdb_latexmk \
+	       build/*.fls build/*.log build/*.out build/*.run.xml build/*.synctex.gz \
+	       build/*.bbl-SAVE-ERROR
 
 distclean: clean
-	rm -f one-page-cv.pdf multi-page-cv.pdf
+	rm -f output/one-page-cv.pdf output/multi-page-cv.pdf

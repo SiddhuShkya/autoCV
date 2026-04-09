@@ -1,0 +1,6 @@
+# For one-page-cv:
+./scripts/compile.sh src/one-page-cv.tex
+# For multi-page-cv:
+./scripts/compile.sh src/multi-page-cv.tex
+# For manish-pariyar:
+./scripts/compile.sh src/manish-pariyar.tex

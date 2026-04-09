@@ -1,0 +1,18 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/../build",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "compile.sh",
+      "tools": ["compile-sh"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "compile-sh",
+      "command": "%DIR%/../scripts/compile.sh",
+      "args": ["%DOC%"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onSave"
+}
