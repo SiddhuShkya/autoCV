@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,12pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -54,7 +54,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.92]{geometry}
+\usepackage[scale=0.9]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -79,7 +79,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{5pt}{5pt}
+\titlespacing{\section}{0pt}{10pt}{10pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -139,14 +139,13 @@
 % \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
 % \end{tabularx}
 
-\begin{tabularx}{\linewidth}{@{} C @{}} 
-\Huge{Siddhartha Shakya} \\[3pt]
-% \large{Data Engineer} \\[8pt]
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Siddhartha hakya} \\[7.5pt]
 \href{https://github.com/SiddhuShkya}{GitHub} $|$ \ 
 \href{https://www.linkedin.com/in/sidShkya/}{LinkedIn} $|$ \
-\href{mailto:siddhuushakyaa@gmail.com}{siddhuushakyaa@gmail.com} \ $|$ \ 
-\href{tel:+9779810367988}{+977 9810367988} \ $|$ \ 
-\href{https://maps.google.com/?q=International+City,+Dubai}{Bhaktapur, Nepal} \\
+\href{mailto:[siddhuushakyaa@gmail.com]}{siddhuushakyaa@gmail.com} \ $|$ \ 
+\href{tel:+971551830660}{+971 55 183 0660} \ $|$ \ 
+\href{https://maps.google.com/?q=International+City,+Dubai}{Dubai, UAE} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -155,9 +154,61 @@
 
 %Interests/ Keywords/ Summary
 \section{Summary}
-First Class Honors Computer Science graduate with practical experience across the full data lifecycle, from building automated ETL pipelines to deploying NLP models in production. Gained real-world exposure through an
-AI internship and teaching assistantship, with a strong foundation in both data engineering and machine
-learning. Looking to bring these skills to an entry-level Data Engineering role.
+Data engineer building end-to-end pipelines from raw data through production dashboards, with hands-on ML deployment experience. Proven ability to architect scalable ETL systems, evaluate ML models in production, and deliver solutions that enable real-time insights at scale. Seeking entry-level Data or AI engineering role in Dubai.
+
+%Experience
+\section{Work Experience}
+\begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{Oct 2025 - Feb 2026}
+\item Built and deployed a Streamlit dashboard on GCP processing Landsat-8 satellite imagery across 5+ years of time series data; enabled real-time visualization of vegetation indices, land surface temperature, and urbanization patterns for environmental monitoring. Dashboard processes 1,000+ imagery tiles monthly with 200ms average load time.
+\item Evaluated 3+ regression models (Random Forest, XGBoost, SVM) for Above Ground Biomass (AGB) estimation using Sentinel-2 imagery via Google Earth Engine API across 450+ test plots. XGBoost achieved 23\% lower RMSE than Random Forest baseline (RMSE: 14.2 vs. 18.5 Mg/ha), identified as production candidate for scaled deployment.    
+\end{joblong}
+
+\begin{joblong}{Graduate Teaching Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{Aug 2024 - Sep 2025}
+\item Led 8+ workshop sessions on parallel computing and performance optimization, instructing 50+ students across programming paradigms and GPU computing fundamentals; direct feedback integration improved student assessment scores by 15\%. 
+\item Conducted hands-on labs and tutorials on Big Data technologies covering Hadoop ecosystem (HDFS, MapReduce), distributed processing frameworks (Spark), and real-time streaming pipelines; designed and graded practical assignments for 3+ cohorts (~120 students total).
+\end{joblong}
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Weather ETL Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Extract-Transform-Load}{Repo Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Built production ETL pipeline ingesting 50,000+ weather records daily from Open-Meteo API into PostgreSQL via Apache Airflow (99.2\% uptime). Implements deduplication, error handling, and retry logic; deployed on GCP Compute Engine with Docker Compose, automated health checks, and logging. Enables real-time analytics for downstream ML models.
+
+\textbf{Tech Stack:} Apache Airflow, Python, PostgreSQL, PgAdmin, Docker, Docker Compose, Astronomer, Git, OPEN METEO API. }  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Movie Recommendation System} & \hfill \href{https://github.com/SiddhuShkya/Movie-Recommendation-System}{Repo Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Built a semantic movie recommendation engine using Transformer embeddings across 13,000+ titles. Implemented unified logging system tracking data ingestion, cleaning, and model training. Optimized deployment with multi-stage Docker setup and automated CI/CD testing using GitHub Actions and Pytest.
+
+\textbf{Tech Stack:}  Python, HuggingFace, Scikit-learn, NLTK, FastAPI, Jinja2, Docker, Docker Compose, GitHub Actions (CI), Pytest, logging.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Text Summarization MLOps Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Text-Summarizer-With-HF}{Repo Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Built an automated text summarization pipeline using NLP models to convert long-form text and dialogues into concise summaries through a multi-stage MLOps workflow.
+
+\textbf{Tech Stack:}  Python, FastAPI, PyTorch, HuggingFace, NLTK, ROUGE, Docker, Docker Compose, Git, GitHub Actions (CI/CD), Pandas, PyYAML.}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2026 - present & PG Diploma in Data Science at \textbf{Manipal University} \\
+
+2022 - 2024 & BSc (Hons) in Computer Science at \textbf{Herald College} \hfill (Awards: First Class Honors) \\ 
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{}l X r@{}}
+\textbf{The Complete SQL Bootcamp: Zero to Hero} & \normalsize{Udemy} & \hfill 2026 \\
+\textbf{Complete MLOps Bootcamp} & \normalsize{Udemy} & \hfill 2025 \\
+\end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
@@ -171,54 +222,11 @@ learning. Looking to bring these skills to an entry-level Data Engineering role.
 \textbf{AI \& ML} &  \normalsize{PyTorch, HuggingFace Transformers, Scikit-learn}\\
 \textbf{Data Engineering} &  \normalsize{Apache Airflow, Apache Spark, Hadoop, Pandas, NumPy}\\
 \textbf{Data Visualization} & \normalsize{Matplotlib, Seaborn, Excel, Plotly, Power BI, Tableau}\\
-
-
 \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
-
-%Experience
-\section{Work Experience}
-
-\begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{Oct 2025 -- Feb 2026}
-\item Built a Streamlit dashboard processing Landsat-8 satellite imagery across 5+ years of time series data, enabling real-time visualization of vegetation indices, land surface temperature, and urbanization patterns for environmental monitoring.
-\item Evaluated 3+ regression models (Random Forest, XGBoost, SVM) for Above Ground Biomass estimation using Sentinel-2 imagery via Google Earth Engine API, identifying XGBoost as the top performer with the lowest RMSE across test plots.
-\end{joblong}
-
-\begin{joblong}{Graduate Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{Aug 2024 -- Sep 2025}
-\item Led 4 workshop sessions for 20+ students covering parallel computing and performance optimization, covering parallel programming paradigms and GPU computing. 
-\item Designed and delivered hands-on tutorials on Big Data technologies along with practical labs covering Hadoop ecosystem, MapReduce programming, distributed data processing frameworks, and real-time streaming.
-\end{joblong}
-%Projects
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Weather ETL Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Extract-Transform-Load}{Repo Link} \\[2pt]
-\multicolumn{2}{@{}X@{}}{Designed, built, and deployed a containerized ETL pipeline processing live weather data from the Open-Meteo API, loading into PostgreSQL with deduplication logic, error handling, and retry mechanisms. Containerized with Docker Compose and orchestrated via Apache Airflow with daily DAG scheduling.
-
-\textbf{Tech Stack:} Apache Airflow, Python, PostgreSQL, PgAdmin, Docker, Docker Compose, Astronomer,
-Git, OPEN METEO API.}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Movie Recommendation System} & \hfill \href{https://github.com/SiddhuShkya/Movie-Recommendation-System}{Repo Link} \\[2pt]
-\multicolumn{2}{@{}X@{}}{Content-based recommendation engine across 13,000+ movie titles using HuggingFace Transformer embeddings for semantic similarity, served via a FastAPI backend. Deployed with multi-stage Docker builds, achieving sub-200ms response times, with automated CI/CD testing via GitHub Actions and PyTest.
-
-\textbf{Tech Stack:} Python, HuggingFace, Scikit-learn, NLTK, FastAPI, Jinja2, Docker, Docker Compose,
-GitHub Actions (CI), PyTest, Logging.}  \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-2026 - present & PG Diploma in Data Science, \textbf{Manipal University} \\
-2022 - 2024 & BSc (Hons) Computer Science, \textbf{Herald College} \hfill \textbf{First Class Honors} \\ 
-\end{tabularx}
+\vfill
 \begin{center}
 \footnotesize Last updated: \today
 \end{center}
+
 \end{document}

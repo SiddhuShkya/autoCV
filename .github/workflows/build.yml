@@ -15,15 +15,10 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: Build One Page CV
+      - name: Build CV
         uses: dante-ev/latex-action@latest
         with:
-          root_file: one-page-cv.tex
-          working_directory: src
-      - name: Build Multi Page CV
-        uses: dante-ev/latex-action@latest
-        with:
-          root_file: multi-page-cv.tex
+          root_file: cv.tex
           working_directory: src
       - name: move
         run: mkdir -p github_artifacts && mv src/*.pdf ./github_artifacts/
