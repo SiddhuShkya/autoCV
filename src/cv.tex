@@ -130,39 +130,88 @@
 \pagestyle{empty} 
 
 %----------------------------------------------------------------------------------------
-%	TITLE
+%	HEADER / TITLE
 %----------------------------------------------------------------------------------------
 
+% Alternative Header Style (Commented Out for Future Reference)
 % \begin{tabularx}{\linewidth}{ @{}X X@{} }
 % \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
 % \raisebox{-0.05\height}\faGithub\ username \ | \
 % \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
 % \end{tabularx}
 
+% Current Header Style: Centered Name and Contact Links
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{SIDDHARTHA SHAKYA} \\[7.5pt]
-\href{https://github.com/SiddhuShkya}{GitHub} $|$ \ 
-\href{https://www.linkedin.com/in/sidShkya/}{LinkedIn} $|$ \
-\href{mailto:[siddhuushakyaa@gmail.com]}{siddhuushakyaa@gmail.com} \ $|$ \ 
-\href{tel:+971551830660}{+971 55 183 0660} \ $|$ \ 
-\href{https://maps.google.com/?q=International+City,+Dubai}{UAE, Dubai} \\
+\Huge{SIDDHARTHA SHAKYA} \\[10pt]
+\href{https://github.com/SiddhuShkya}{\raisebox{-0.05\height}\faGithub\ GitHub} $|$ \
+\href{https://www.linkedin.com/in/sidShkya/}{\raisebox{-0.05\height}\faLinkedin\ LinkedIn} $|$ \
+\href{mailto:siddhuushakyaa@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ siddhuushakyaa@gmail.com} \ $|$ \ 
+\href{tel:+971551830660}{\raisebox{-0.05\height}\faMobile \ +971 55 183 0660} \ $|$ \
+\href{https://maps.google.com/?q=International+City,+Dubai}{\raisebox{-0.05\height}\faMapMarker \ UAE, Dubai} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
+%	PROFILE SUMMARY
 %----------------------------------------------------------------------------------------
-
-%Interests/ Keywords/ Summary
 \section{Profile Summary}
-Computer science graduate (First Class Honors) with a strong foundation in data science and machine learning — applied through an AI internship and personal projects spanning predictive modeling, satellite imagery analysis, and ETL pipeline development. Proficient in Python, SQL, Apache Airflow, Spark, and AWS/GCP, with hands-on experience in MLOps and CI/CD pipelines. Actively seeking an entry-level Data Science role.
+% A brief overview of skills and career objectives
+First-Class Honors Computer Science graduate specializing in end-to-end Data Science and Machine Learning life cycle. Hands-on experience across the MLOps lifecycle, CI/CD automation, and cloud infrastructure (AWS/GCP). Equipped with practical internship experience and seeking to deliver scalable data solutions in an entry-level Data Science role.
 
-%Experience
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Languages} & Python, SQL, Java, C/C++ \\
+\textbf{Databases} & PostgreSQL, MySQL, MongoDB \\
+\textbf{Cloud} & AWS, GCP \\
+\textbf{AI \& ML} & PyTorch, Scikit-learn, MLflow, Pandas, NumPy \\
+\textbf{Data Engineering} & Databricks, dbt, Apache Spark, Airflow \\
+\textbf{Data Analytics} & Plotly, Seaborn, Jupyter Notebook, Google Colab \\
+\textbf{DevOps} & Docker, GitHub Actions, GitHub, Git \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+% Project 1: Weather ETL Pipeline
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Weather ETL Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Extract-Transform-Load}{Repo Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Architected a production ETL pipeline ingesting 50,000+ weather records daily from Open-Meteo API into PostgreSQL via Apache Airflow (99.2\% uptime). Implements deduplication, error handling, and retry logic; deployed on GCP Compute Engine with Docker Compose, automated health checks, and logging. Enables real-time analytics for downstream ML models.
+
+\textbf{Tech Stack:} Apache Airflow, Python, PostgreSQL, PgAdmin, Docker, Docker Compose, Astronomer, Git, OPEN METEO API. }  \\
+\end{tabularx}
+
+% Project 2: Movie Recommendation System
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Movie Recommendation System} & \hfill \href{https://github.com/SiddhuShkya/Movie-Recommendation-System}{Repo Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Engineered a semantic movie recommendation engine using Transformer embeddings across 13,000+ titles, enabling highly accurate contextual searches. Implemented unified logging system tracking data ingestion, cleaning, and model training. Optimized deployment with multi-stage Docker setup and automated CI/CD testing using GitHub Actions and Pytest, reducing deployment overhead.
+
+\textbf{Tech Stack:}  Python, HuggingFace, Scikit-learn, NLTK, FastAPI, Jinja2, Docker, Docker Compose, GitHub Actions (CI), Pytest, logging.}  \\
+\end{tabularx}
+
+% Project 3: Text Summarization MLOps Pipeline
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Text Summarization MLOps Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Text-Summarizer-With-HF}{Repo Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Developed an automated text summarization pipeline using NLP models to convert long-form text and dialogues into concise summaries. Orchestrated a multi-stage MLOps workflow, ensuring consistent ROUGE scores for reliable model evaluation and deployment.
+
+\textbf{Tech Stack:}  Python, FastAPI, PyTorch, HuggingFace, NLTK, ROUGE, Docker, Docker Compose, Git, GitHub Actions (CI/CD), Pandas, PyYAML.}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
 \section{Work Experience}
+
+% Job 1: AI Intern
 \begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{Oct 2025 - Feb 2026}
 \item Built and deployed a Streamlit dashboard on GCP processing Landsat-8 satellite imagery across 5+ years of time series data; enabled real-time visualization of vegetation indices, land surface temperature, and urbanization patterns for environmental monitoring. Dashboard processes 1,000+ imagery tiles monthly with 200ms average load time.
 \item Evaluated 3+ regression models (Random Forest, XGBoost, SVM) for Above Ground Biomass (AGB) estimation using Sentinel-2 imagery via Google Earth Engine API across 450+ test plots. XGBoost achieved 23\% lower RMSE than Random Forest baseline (RMSE: 14.2 vs. 18.5 Mg/ha), identified as production candidate for scaled deployment.    
 \end{joblong}
 
+% Job 2: Teaching Assistant
 \begin{joblong}{Graduate Teaching Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{Aug 2024 - Sep 2025}
 \item Led 8+ workshop sessions on parallel computing and performance optimization, instructing 50+ students across programming paradigms and GPU computing fundamentals; direct feedback integration improved student assessment scores by 15\%. 
 \item Conducted hands-on labs and tutorials on Big Data technologies covering Hadoop ecosystem (HDFS, MapReduce), distributed processing frameworks (Spark), and real-time streaming pipelines; designed and graded practical assignments for 3+ cohorts (~120 students total).
@@ -171,50 +220,13 @@ Computer science graduate (First Class Honors) with a strong foundation in data 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-2026 - present & PG Diploma in Data Science at \textbf{Manipal University} \\
+\section{Educational Background}
+\textbf{PG Diploma in Data Science} \hfill {Feb 2026 -- present} \\
+Manipal Academy of Higher Education 
 
-2022 - 2024 & BSc (Hons) in Computer Science at \textbf{Herald College} \hfill (Awards: First Class Honors) \\ 
-\end{tabularx}
-
-%Projects
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Weather ETL Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Extract-Transform-Load}{Repo Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Built production ETL pipeline ingesting 50,000+ weather records daily from Open-Meteo API into PostgreSQL via Apache Airflow (99.2\% uptime). Implements deduplication, error handling, and retry logic; deployed on GCP Compute Engine with Docker Compose, automated health checks, and logging. Enables real-time analytics for downstream ML models.
-
-\textbf{Tech Stack:} Apache Airflow, Python, PostgreSQL, PgAdmin, Docker, Docker Compose, Astronomer, Git, OPEN METEO API. }  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Movie Recommendation System} & \hfill \href{https://github.com/SiddhuShkya/Movie-Recommendation-System}{Repo Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Built a semantic movie recommendation engine using Transformer embeddings across 13,000+ titles. Implemented unified logging system tracking data ingestion, cleaning, and model training. Optimized deployment with multi-stage Docker setup and automated CI/CD testing using GitHub Actions and Pytest.
-
-\textbf{Tech Stack:}  Python, HuggingFace, Scikit-learn, NLTK, FastAPI, Jinja2, Docker, Docker Compose, GitHub Actions (CI), Pytest, logging.}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Text Summarization MLOps Pipeline} & \hfill \href{https://github.com/SiddhuShkya/Text-Summarizer-With-HF}{Repo Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Built an automated text summarization pipeline using NLP models to convert long-form text and dialogues into concise summaries through a multi-stage MLOps workflow.
-
-\textbf{Tech Stack:}  Python, FastAPI, PyTorch, HuggingFace, NLTK, ROUGE, Docker, Docker Compose, Git, GitHub Actions (CI/CD), Pandas, PyYAML.}  \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Programming} &  \normalsize{Python, SQL, C/C++, Bash/Shell}\\
-\textbf{Databases} &  \normalsize{PostgreSQL, MongoDB, MySQL}\\ 
-\textbf{Cloud Platforms} &  \normalsize{AWS, Google Cloud Platform (GCP)}\\
-\textbf{DevOps \& MLOps} &  \normalsize{Docker, Git \& GitHub Actions (CI/CD), MLflow, DVC}\\
-\textbf{AI \& ML} &  \normalsize{PyTorch, HuggingFace Transformers, Scikit-learn}\\
-\textbf{Data Engineering} &  \normalsize{Apache Airflow, Apache Spark, Hadoop, Pandas, NumPy}\\
-\textbf{Data Visualization} & \normalsize{Matplotlib, Seaborn, Excel, Plotly, Power BI, Tableau}\\
-\end{tabularx}
+\textbf{BSc (Hons) Computer Science} \hfill {Feb 2022 -- Jun 2024} \\
+University of Wolverhampton  \\
+Honors: \hfill \textbf{First Class Honors}
 
 %----------------------------------------------------------------------------------------
 %	CERTIFICATIONS
