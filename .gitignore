@@ -11,6 +11,7 @@
 *.toc
 *.synctex.gz
 *.pdf
-
+input
+input.txt
 # Keep requirement files
 !apt-requirements.txt
