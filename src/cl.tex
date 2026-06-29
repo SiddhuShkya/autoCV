@@ -1,51 +1,96 @@
-\documentclass[11pt, a4paper, roman]{letter}
-\usepackage[top = 12mm, bottom = 12mm, left=10mm, right=10mm]{geometry}
+\documentclass[11pt,a4paper]{article}
+% -------------------------------------------------
+% Packages
+% -------------------------------------------------
+\usepackage[top=12mm,bottom=12mm,left=15mm,right=15mm]{geometry} 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{ragged2e}
 \usepackage[UKenglish]{babel}
-\usepackage[stretch = 25, shrink = 25]{microtype}
+\usepackage{ragged2e}
+\usepackage[stretch=25,shrink=25]{microtype}
+\usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{fontawesome}
-\usepackage{fancyhdr}
-\usepackage{enumitem}
-\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{lipsum} 
+
+% -------------------------------------------------
+% Colors and Setup
+% -------------------------------------------------
 \definecolor{cvteal}{HTML}{008080}
 \definecolor{cvblue}{HTML}{304263}
-\usepackage[colorlinks = true, urlcolor = black, linkcolor = white]{hyperref}
-\usepackage{lipsum}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+\setlength{\parindent}{0pt}         
+\setlength{\parskip}{0.5em}         
+
+% -------------------------------------------------
 \begin{document}
 \pagestyle{empty}
-\raggedbottom
-\begin{minipage}[t]{0.5\textwidth}
-    \vspace*{\fill}
-    \textsc{{\Huge First Last}, {\LARGE PhD}}
-    \vspace*{\fill}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.3\textwidth}
-    \setlength{\baselineskip}{15pt}
-    \RaggedLeft 
-    \faMobile{} Phone Number\\
-    \faHome{} City/ Country\\ 
-    \faEnvelope{} email ID\\ 
-    \faLinkedinSquare{} in/linedin profuke
+
+%==================================================
+% Header
+%==================================================
+\begin{minipage}[b]{0.52\textwidth}
+{\Huge\scshape\color{cvblue} Siddhartha Shakya}\\ [1.5mm]
+{\Large\color{gray} \faGraduationCap\  BSc (Hons) in Computer Science}
 \end{minipage}
-{\color{cvteal} \rule{\linewidth}{1mm}}
-\begin{minipage}[t]{\textwidth}
-    \begin{letter}{HR/ Hiring Manager\\Address line 1\\
-Address line 2\\Town/ City\\County\\Post-code}
-\setlength{\parskip}{3pt}       % reduced from 5pt
-\setlength{\baselineskip}{13pt} % reduced from 15pt
-    \opening{Dear Manager}
-    \begin{center}{\textbf{Position:} \underline{Job Title / Name (Vacancy ID)}}\end{center}
-\setlength{\parskip}{6pt}       % reduced from 20pt — this was the main culprit
-\justifying{
-\lipsum[1-4]
-}   
-\end{letter}
-\vspace{10pt}
+\hfill
+\begin{minipage}[b]{0.43\textwidth}
+\RaggedLeft\small
+\setlength{\baselineskip}{14pt}
+\mbox{\faMobile\ +971 55 183 0660}\\
+\mbox{\faHome\ Dubai, UAE}\\
+\mbox{\faEnvelope\ \href{mailto:siddhuushakyaa@gmail.com}{siddhuushakyaa@gmail.com}}\\
+\mbox{\faLinkedinSquare\ \href{https://linkedin.com/in/sidShkya}{linkedin.com/in/sidShkya}}\\
+\mbox{\faGithub\ \href{https://github.com/SiddhuShkya}{github.com/SiddhuShkya}}
 \end{minipage}
-Yours sincerely,\\\textbf{Your Name}
+
+\vspace{1mm}
+{\color{cvteal}\rule{\linewidth}{1mm}} 
+\vspace{2mm}
+
+%==================================================
+% Recipient & Date
+%==================================================
+\begin{flushleft}
+    \textbf{Hiring Manager} \\
+    NMDC Group \\
+    \vspace{1mm}
+    \today
+\end{flushleft}
+
+\vspace{1mm}
+
+%==================================================
+% Letter Body
+%==================================================
+Dear Hiring Manager,\\
+
+\begin{center}{\textbf{Position:} \underline{Software Engineer}}\end{center}
+
+\justifying 
+
+I am writing to express my strong interest in the Software Engineer position. As a First-Class Honors Computer Science graduate with hands-on experience building, testing, and deploying impactful industrial solutions, I am eager to bring my background in full stack development and application optimization to your team. During my internship at Mach24 Orbitals, I successfully deployed a cloud-based dashboard on GCP that processed over 1,000 data tiles monthly while optimizing application performance to achieve a 200ms average load time.
+
+My technical background strongly aligns with your focus on clean, modular, and efficient code. I have consistently followed coding best practices, utilizing tools like Python, SQL, Docker, and GCP to build robust and scalable applications. In my EduFin Investigation project, I wrote efficient SQL data pipelines to analyze a 15,000+ student loan portfolio, thoroughly troubleshooting, debugging, and testing issues to ensure data accuracy. Furthermore, my experience as a Graduate Teaching Assistant involved actively engaging in collaborative planning akin to Agile methodologies, as well as contributing to technical specifications and user guides that improved student assessment scores by 15\%.
+
+I am particularly excited about this role because it emphasizes both full stack development and the delivery of high-performance industrial solutions. Your focus on Agile methodologies, sprint planning, and comprehensive documentation aligns perfectly with my methodical approach to software engineering, where I strive to build reliable and well-documented systems that drive real business impact.
+
+I would welcome the opportunity to discuss how my skills in software development, testing, and optimization can contribute to your upcoming projects. Thank you for considering my application. I look forward to the possibility of an interview.
+
+\vspace{3mm}
+
+Yours sincerely, \\
+\textbf{Siddhartha Shakya}
+
+%==================================================
+% Footer
+%==================================================
 \vfill
-{\color{cvteal} \rule{\linewidth}{1mm}}
+{\color{cvteal}\rule{\linewidth}{1mm}}
+
 \end{document}

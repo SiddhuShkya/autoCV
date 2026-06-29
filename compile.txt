@@ -1,2 +1,5 @@
 # For cv:
-./scripts/compile.sh src/cv.tex
+./scripts/compile.sh src/cv.tex 
+
+# For cl:
+./scripts/compile.sh src/cl.tex

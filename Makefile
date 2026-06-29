@@ -1,7 +1,10 @@
-all: output/cv.pdf
+all: output/cv.pdf output/cl.pdf
 
 output/cv.pdf: src/cv.tex
 	./scripts/compile.sh src/cv.tex
+
+output/cl.pdf: src/cl.tex
+	./scripts/compile.sh src/cl.tex
 
 clean:
 	rm -f build/*.aux build/*.bbl build/*.bcf build/*.blg build/*.fdb_latexmk \
@@ -9,4 +12,4 @@ clean:
 	       build/*.bbl-SAVE-ERROR
 
 distclean: clean
-	rm -f output/cv.pdf
+	rm -f output/cv.pdf output/cl.pdf
