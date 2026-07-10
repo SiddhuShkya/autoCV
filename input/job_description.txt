@@ -1,0 +1,24 @@
+================================================================================
+                         JOB DESCRIPTION
+================================================================================
+
+[PASTE THE FULL JOB DESCRIPTION BELOW THIS LINE]
+--------------------------------------------------------------------------------
+
+About the job
+Data Science Consultant
+
+
+
+I am looking for someone to join a growing consulting team delivering bespoke AI and analytics solutions that help organisations solve complex commercial challenges through data. This is a client-facing role combining data science, consulting and technical delivery, where you'll work closely with business stakeholders to translate requirements into scalable analytical solutions.
+
+
+You will design and deliver end-to-end data science projects, develop custom Python and SQL solutions, improve machine learning models, and optimise classification and clustering performance while addressing data bias. Responsibilities include data transformation, quality assurance, insight generation, dashboard creation, client presentations, and contributing to the continuous improvement of analytics products and delivery processes.
+
+
+I am looking for high levek candidates with a Master's or PhD in a quantitative discipline and 3+ years' experience in data science, analytics or consulting. Strong Python, SQL, statistical modelling and machine learning expertise are essential, alongside experience with pandas, NumPy, scikit-learn, NLP frameworks, transformers/LLMs, APIs and modern software engineering practices. Exposure to Azure DevOps, MLOps, Docker, Kubernetes or cloud AI platforms would be advantageous. Excellent communication skills, commercial awareness and the ability to simplify complex technical concepts for clients are key.
+
+
+This is an exceptional mandate - please let me know if interested.
+
+================================================================================

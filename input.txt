@@ -1,0 +1,1 @@
+I've pasted a job description in input/job_description.txt. Please read input/prompt.txt and input/job_description.txt, then rewrite src/cv.tex and src/cl.tex accordingly, compile it, and generate resulting pdfs. Also compile both file at once using the makefile make command.

@@ -10,9 +10,3 @@
 *.blg
 *.toc
 *.synctex.gz
-*.pdf
-input
-input.txt
-cover_letter.txt
-# Keep requirement files
-!apt-requirements.txt
