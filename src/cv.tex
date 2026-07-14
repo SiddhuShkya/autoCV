@@ -135,20 +135,25 @@
 
 % Current Header Style: Centered Name and Contact Links
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Siddhartha Shakya} \\[5pt]
-\href{https://siddhushkya.github.io/my-portfolio/}{\raisebox{-0.05\height}\faGlobe\ Website} $|$ \
-\href{https://github.com/SiddhuShkya}{\raisebox{-0.05\height}\faGithub\ GitHub} $|$ \
+\fontsize{30pt}{40pt}\selectfont Siddhartha Shakya \\[7pt]
+\href{https://maps.google.com/?q=Dubai,UAE}{\raisebox{-0.05\height}\faMapMarker \ UAE, Dubai} $|$ \
+\href{tel:+971551830660}{\raisebox{-0.05\height}\faMobile \ +971 55 183 0660} $|$ \
+\href{mailto:siddhuushakyaa@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ siddhuushakyaa@gmail.com} $|$ \
 \href{https://www.linkedin.com/in/sidShkya/}{\raisebox{-0.05\height}\faLinkedin\ LinkedIn} $|$ \
-\href{mailto:siddhuushakyaa@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ siddhuushakyaa@gmail.com}  $|$ \
-\href{tel:+971551830660}{\raisebox{-0.05\height}\faMobile \ +971 55 183 0660} \ $|$ \
-\href{https://maps.google.com/?q=Dubai,UAE}{\raisebox{-0.05\height}\faMapMarker \ UAE, Dubai} \\
+\href{https://github.com/SiddhuShkya}{\raisebox{-0.05\height}\faGithub\ GitHub} $|$ \
+\href{https://siddhushkya.github.io/my-portfolio/}{\raisebox{-0.05\height}\faGlobe\ Website} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	PROFILE SUMMARY
 %----------------------------------------------------------------------------------------
 \section{Profile Summary}
-First-Class Honors Computer Science graduate with 1–2 years of hands-on experience building data pipelines, AI applications, and analytics solutions. Skilled in Python, SQL, and cloud platforms, with a strong focus on delivering real-world AI and data driven solutions that drive business impact.
+\textbf{First-Class Honors Computer Science} graduate with \textbf{hands-on 
+experience in data science and analytics}. Proficient and confident in 
+\textbf{Python}, \textbf{SQL}, and \textbf{Excel} with proven ability to 
+design and build efficient \textbf{data pipelines}. Demonstrated expertise 
+through real-world projects including \textbf{financial data analysis}, 
+\textbf{geospatial analytics}, and \textbf{workflow automation}. Committed to delivering \textbf{impactful, data-driven solutions}.
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
@@ -156,12 +161,11 @@ First-Class Honors Computer Science graduate with 1–2 years of hands-on experi
 \section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \textbf{Languages} & Python, SQL, C/C++ \\
-\textbf{Data Engineering \& Pipelines} & Databricks, Apache Spark, Apache Airflow, ETL/ELT, Data Pipelines \\
-\textbf{AI \& Data Applications} & PyTorch, Scikit-learn, Pandas, NumPy \\
-\textbf{Cloud Platforms} & GCP (BigQuery, Earth Engine, Cloud Storage), AWS \\
-\textbf{Analytics \& Visualization} & Plotly, Seaborn, Matplotlib, Jupyter Notebook, Google Colab, Dashboards \\
-\textbf{Databases} & PostgreSQL, MySQL, MongoDB\\
-\textbf{DevOps \& Tools} & Docker, Git, GitHub, GitHub Actions, Streamlit \\
+\textbf{AI \& ML} & PyTorch, Scikit-learn, NumPy \\
+\textbf{Data Engineering} & Databricks, Apache Airflow, Snowflake, dbt \\
+\textbf{Data Analytics} & Pandas, Matplotlib, Seaborn, Streamlit, Jupyter Notebooks, Excel \\
+\textbf{Databases} & MySQL, PostgreSQL, MongoDB \\
+\textbf{DevOps \& Tools} & Docker, MLflow, Git, GitHub, GitHub Actions (CI/CD), YAML \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -171,15 +175,14 @@ First-Class Honors Computer Science graduate with 1–2 years of hands-on experi
 
 % Job 1: AI Intern
 \begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{\textbf{Oct 2025 -- Feb 2026}}
-\item Developed and maintained Python applications and data pipelines processing 1,000+ imagery tiles monthly; automated ETL processes and API integrations using GCP to ensure data quality and reliability.
-\item Built and evaluated machine learning models for forecasting, evaluating performance across 450+ test cases to achieve a 23\% lower RMSE (14.2 vs. 18.5 Mg/ha) than the Random Forest baseline.
-\item Supported decision-making by constructing interactive Streamlit dashboards and translating complex data into actionable insights for cross-functional stakeholders.
+\item Designed and implemented an automated geospatial data extraction system leveraging GEE (Google Earth Engine) API to retrieve satellite imagery from specified areas of interest (AOI) across custom time ranges, eliminating manual data download processes and reducing processing time.
+\item Owned end-to-end data pipeline responsibility: automated data ingestion, quality assurance, cleaning, normalization, and feature engineering to ensure data reliability for analytics and model training.
 \end{joblong}
 
 % Job 2: Teaching Assistant
 \begin{joblong}{Graduate Teaching Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{\textbf{Aug 2024 -- Sep 2025}}
-\item Led technical workshops for 120+ students on programming paradigms, SQL, and big data technologies including Spark and real-time streaming pipelines.
-\item Built and documented data applications, ETL workflows, and pipeline design examples, improving student assessment scores by 15\% through clear communication.
+\item Developed comprehensive Big Data curriculum covering Hadoop ecosystem, SQL and MongoDB databases, Python, and PySpark; delivered hands-on labs and practical assignments to 120+ students, achieving 15\% improvement in assessment scores.
+\item Architected and delivered High Performance Computing (HPC) technical workshops on parallel programming, concurrent programming, C/C++, and CUDA GPU computing; created practical labs that enhanced student mastery of performance optimization techniques.
 \end{joblong}
 
 %----------------------------------------------------------------------------------------
@@ -188,17 +191,17 @@ First-Class Honors Computer Science graduate with 1–2 years of hands-on experi
 \section{Projects}
 
 % Project 1: EduFin
-\begin{joblong}{EduFin Data Investigation \& Analytics $|$ \normalfont{2026}}{\href{https://github.com/SiddhuShkya/Databricks-EduFin-Investigation}{Project Link}}
-\item Built and optimized data pipelines in Databricks using PySpark and SQL to ingest and analyze a 15,000+ student loan portfolio, resolving a Rs.\ 12 Crore data discrepancy.
-\item Translated ambiguous business requirements into practical solutions, segmenting risk factors and developing interactive dashboards to support stakeholder decisions.
-\item \textbf{Tech Stack:} Python, Databricks, PySpark SQL, Delta Tables, Data Pipelines, Data Visualization
+\begin{joblong}{EduFin Investigation $|$ \normalfont{\textit{Financial Risk Analysis}} $|$ \normalfont{\href{https://github.com/SiddhuShkya/Databricks-EduFin-Investigation}{Link}}}{\textbf{2026}}
+\item Built and optimized data pipelines in Databricks using PySpark and SQL to ingest and analyze a 15,000+ student loan portfolio, uncovering a Rs.\ 12 Crore financial discrepancy.
+\item Identified critical risk patterns through segmentation analysis, isolating high-risk regions, customer profiles, and partner institutions to inform data-driven risk mitigation strategies.
+\item \textbf{Tech Stack:} Python, Databricks, PySpark SQL, Delta Tables, Data Pipelines, Claude
 \end{joblong}
 
 % Project 2: Geospatial
-\begin{joblong}{Geospatial Environmental Monitoring Dashboard $|$ \normalfont{2025}}{\href{https://github.com/SiddhuShkya/Mach24-Orbital-Project}{Project Link}}
-\item Developed a Python application and data pipelines utilizing Streamlit and APIs to process USGS satellite datasets with a 200ms average load time.
-\item Designed interactive dashboards to visualize key performance indicators (KPIs), delivering real-time reporting interfaces to simplify complex data.
-\item \textbf{Tech Stack:} Python, Pandas, Streamlit, Folium, APIs, Docker, GCP
+\begin{joblong}{NYC Parking Violations $|$ \normalfont{\textit{Data Pipeline}} $|$ \normalfont{\href{https://github.com/SiddhuShkya/Data-Engineering-With-DBT}{Link}}}{\textbf{2025}}
+\item Built a multi-layer Medallion Architecture (Bronze/Silver/Gold) ELT pipeline transforming raw NYC parking violation data from NYC Open Data into analytics-ready metric tables.
+\item Automated production deployments using GitHub Actions CI/CD with separate dev/prod DuckDB profiles.
+\item \textbf{Tech Stack:} dbt Core, DuckDB, SQL, Python, Jupyter Notebook, GitHub Actions, YAML
 \end{joblong}
 
 %----------------------------------------------------------------------------------------
@@ -207,13 +210,13 @@ First-Class Honors Computer Science graduate with 1–2 years of hands-on experi
 \section{Education}
 \textbf{PG Diploma in Data Science} \hfill \textbf{Feb 2026 -- present} \\
 \vspace{-15pt}
-\begin{itemize}[nosep, leftmargin=1em, itemsep=1pt, label=--]
+\begin{itemize}[nosep, leftmargin=1.5em, itemsep=1pt, label=--]
     \item \textit{Manipal Academy of Higher Education}
 \end{itemize}
 
-\textbf{BSc (Hons) Computer Science} \hfill \textbf{Feb 2022 -- Jun 2024} \\
+\textbf{BSc (Hons) in Computer Science} \hfill \textbf{Feb 2022 -- Jun 2024} \\
 \vspace{-15pt}
-\begin{itemize}[nosep, leftmargin=1em, itemsep=1pt, label=--]
+\begin{itemize}[nosep, leftmargin=1.5em, itemsep=1pt, label=--]
     \item \textit {University of Wolverhampton}
     \item Honors: \textbf{First Class}
 \end{itemize}
@@ -222,10 +225,10 @@ First-Class Honors Computer Science graduate with 1–2 years of hands-on experi
 %	CERTIFICATIONS
 %----------------------------------------------------------------------------------------
 \section{Certifications}
-\begin{tabularx}{\linewidth}{@{}l X r@{}}
-PySpark: Building Data Pipelines & LinkedIn Learning & \href{https://github.com/SiddhuShkya/PySpark-Essential-Training-Building-Data-Pipelines/blob/main/certificate/certificate.png}{Certificate} \\
-SQL Bootcamp                     & Udemy             & \href{https://github.com/SiddhuShkya/SQL-Bootcamp-Zero-To-Hero/blob/main/certificate/UC-5aa96a48-14df-4219-868c-68d9ea1658c2.pdf}{Certificate} \\
-MLOps Bootcamp          & Udemy             & \href{https://github.com/SiddhuShkya/Machine-Learning-Operations/blob/main/certificate/UC-864e71bf-b3fd-4c82-a31d-8db799454870.pdf}{Certificate} \\
+\begin{tabularx}{\linewidth}{@{}p{0.45\linewidth} >{\raggedright\arraybackslash}X r@{}}
+\textbf{AI Fluency: Framework \& Foundations}     & Anthropic & \href{https://verify.skilljar.com/c/azo7p3jpj66r}{Certificate} \\
+\textbf{MLOps Bootcamp}          & Udemy             & \href{https://www.udemy.com/certificate/UC-864e71bf-b3fd-4c82-a31d-8db799454870/}{Certificate} \\
+\textbf{SQL Bootcamp}                     & Udemy             & \href{https://www.udemy.com/certificate/UC-5aa96a48-14df-4219-868c-68d9ea1658c2/}{Certificate} 
 \end{tabularx}
 
 \vfill

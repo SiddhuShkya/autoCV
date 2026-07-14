@@ -6,19 +6,35 @@
 --------------------------------------------------------------------------------
 
 About the job
-Data Science Consultant
-
-
-
-I am looking for someone to join a growing consulting team delivering bespoke AI and analytics solutions that help organisations solve complex commercial challenges through data. This is a client-facing role combining data science, consulting and technical delivery, where you'll work closely with business stakeholders to translate requirements into scalable analytical solutions.
-
-
-You will design and deliver end-to-end data science projects, develop custom Python and SQL solutions, improve machine learning models, and optimise classification and clustering performance while addressing data bias. Responsibilities include data transformation, quality assurance, insight generation, dashboard creation, client presentations, and contributing to the continuous improvement of analytics products and delivery processes.
-
-
-I am looking for high levek candidates with a Master's or PhD in a quantitative discipline and 3+ years' experience in data science, analytics or consulting. Strong Python, SQL, statistical modelling and machine learning expertise are essential, alongside experience with pandas, NumPy, scikit-learn, NLP frameworks, transformers/LLMs, APIs and modern software engineering practices. Exposure to Azure DevOps, MLOps, Docker, Kubernetes or cloud AI platforms would be advantageous. Excellent communication skills, commercial awareness and the ability to simplify complex technical concepts for clients are key.
-
-
-This is an exceptional mandate - please let me know if interested.
+Job Description
+Build Smart Systems. Automate Learning. Turn Data into Insight.
+We’re seeking a highly technical and innovative Learning Technology & AI Solutions Specialist to support and evolve a modern digital learning ecosystem. This role sits at the intersection of learning platforms, AI, automation, and data analytics, helping to improve how training is delivered, measured, and experienced across the network.
+You’ll work across LMS systems, microlearning platforms, automation workflows, and AI tools—building solutions that improve engagement, reduce manual effort, and deliver meaningful insights to the business.
+What You’ll Do
+ Manage and optimize learning platforms (LMS and Microlearning), including user accounts, course setup, campaigns, and troubleshooting 
+ Design and build AI-enabled solutions such as learning assistants, Q&A bots, reporting summaries, and training insights tools 
+ Develop automation workflows and scripts (Python, Power Automate, APIs) to streamline manual processes like provisioning, reporting, and campaign scheduling 
+ Create engaging microlearning content, including quizzes, challenges, and scenario-based learning aligned to business goals 
+ Build and maintain RAG workflows, LLM integrations, and AI agents (LangChain, LangGraph) connected to training knowledge sources 
+ Maintain and enhance reporting tools, including Power BI dashboards and automated reporting applications (Streamlit / HTML) 
+ Extract, clean, and analyze training data from LMS, microlearning platforms, and databases to identify trends and performance gaps 
+ Automate and streamline recurring data processes such as reporting, reconciliation, and survey analysis 
+ Support training measurement, including survey analysis, KPI tracking, and performance insights 
+ Lead stakeholder communications, including dealer follow-ups, reporting support, and training guidance 
+ Present insights, dashboards, and AI initiatives to leadership in a clear, business-focused way 
+ Identify new opportunities to improve engagement, automation, and platform effectiveness 
+What Makes You a Great Fit
+ Experience working across learning platforms, data, or digital training environments 
+ Strong skills in Python, Power BI, and Excel for data processing, reporting, and automation 
+ Hands-on experience with Generative AI, LLMs, or AI tools applied to real business use cases 
+ Familiarity with RAG, prompt engineering, or AI workflows (LangChain, vector databases, etc.) 
+ Experience building automation solutions (scripts, APIs, Power Automate, or similar tools) 
+ Strong analytical mindset—able to turn raw data into clear business insights 
+ Comfortable working with both technical systems and non-technical stakeholders 
+ Ability to manage multiple priorities and work independently in a fast-paced environment 
+ Strong communication skills, including the ability to present technical concepts clearly 
+ Background in training, learning operations, or digital content development is a plus 
+Why This Role Stands Out
+This is not a traditional L&D or data role—you’ll be building the systems that modernize how learning operates. From AI agents to automated reporting and personalized content, your work will directly shape how training scales, engages users, and drives performance.
 
 ================================================================================
