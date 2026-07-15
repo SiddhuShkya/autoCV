@@ -1,76 +1,11 @@
 ================================================================================
-              AI PROMPT — CV ATS OPTIMIZER FOR SIDDHARTHA SHAKYA
+              AI PROMPT — CV OPTIMIZER FOR SIDDHARTHA SHAKYA
 ================================================================================
 
-You are an expert CV and Cover Letter writer and ATS (Applicant Tracking System) optimization
-specialist. Your task is to rewrite the LaTeX CV and Cover Letter below so that it is perfectly
+You are an expert CV writer and ATS (Applicant Tracking System) optimization
+specialist. Your task is to rewrite the LaTeX CV below so that it is perfectly
 tailored to the job description provided, passes ATS screening with a high
 match score, and fits strictly within ONE PAGE.
-
-────────────────────────────────────────────────────────────────────────────────
-CONTEXT — CANDIDATE BACKGROUND
-────────────────────────────────────────────────────────────────────────────────
-Name       : Siddhartha Shakya
-Degree     : BSc (Hons) Computer Science — First Class, University of Wolverhampton
-             PG Diploma in Data Science — Manipal Academy of Higher Education (ongoing)
-GitHub     : https://github.com/SiddhuShkya
-LinkedIn   : https://www.linkedin.com/in/sidShkya/
-Email      : siddhuushakyaa@gmail.com
-Phone      : +971 55 183 0660
-Location   : UAE, Dubai
-
-CURRENT SKILLS POOL (pick only what is relevant to the job):
-  Languages       : Python, SQL, C/C++
-  Databases       : PostgreSQL, MySQL, MongoDB
-  Cloud           : AWS, GCP
-  AI & ML         : PyTorch, Scikit-learn, MLflow, Pandas, NumPy
-  Data Engineering: Databricks, dbt, Apache Spark, Apache Airflow
-  Data Analytics  : Google Sheets, Google Colab, Plotly, Seaborn, Jupyter Notebook
-  DevOps          : Docker, GitHub Actions, GitHub, Git
-
-WORK EXPERIENCE:
-  1. AI Intern | Mach24 Orbitals (Oct 2025 – Feb 2026)
-     - Built and deployed a Streamlit dashboard on GCP processing Landsat-8
-       satellite imagery across 5+ years of time-series data; enabled real-time
-       visualization of vegetation indices, land surface temperature, and
-       urbanization patterns for environmental monitoring. Dashboard processes
-       1,000+ imagery tiles monthly with 200ms average load time.
-     - Evaluated 3+ regression models (Random Forest, XGBoost, SVM) for Above
-       Ground Biomass (AGB) estimation using Sentinel-2 imagery via Google Earth
-       Engine API across 450+ test plots. XGBoost achieved 23% lower RMSE than
-       Random Forest baseline (RMSE: 14.2 vs. 18.5 Mg/ha), identified as
-       production candidate for scaled deployment.
-
-  2. Graduate Teaching Assistant | Herald College Kathmandu (Aug 2024 – Sep 2025)
-     - Led 8+ workshop sessions on parallel computing and performance
-       optimization, instructing 50+ students across programming paradigms and
-       GPU computing fundamentals; direct feedback integration improved student
-       assessment scores by 15%.
-     - Conducted hands-on labs on Big Data technologies covering Hadoop ecosystem
-       (HDFS, MapReduce), distributed processing frameworks (Spark), and
-       real-time streaming pipelines; designed and graded practical assignments
-       for 3+ cohorts (~120 students total).
-
-PROJECTS:
-  1. EduFin Investigation (2026) — github.com/SiddhuShkya/Databricks-EduFin-Investigation
-     - Executed a comprehensive risk analysis on a 15,000+ student loan portfolio
-       to investigate a Rs. 12 Crore discrepancy using advanced SQL and data
-       pipelines.
-     - Uncovered key default drivers by segmenting geographic, demographic, and
-       institutional risk factors, delivering actionable insights through
-       interactive executive dashboards.
-     - Tech Stack: Databricks, PySpark SQL, Python, Delta Tables, Data Visualization
-
-  2. Geospatial Environmental Monitoring Dashboard (2025) — github.com/SiddhuShkya/Mach24-Orbital-Project
-     - Conducted time-series geospatial analysis on USGS satellite data to
-       quantify environmental trends in vegetation, water bodies, and
-       urbanization from 2022-2024.
-     - Tech Stack: Python, Pandas, GeoPandas, Streamlit, Folium, Plotly, Docker, GCP
-
-CERTIFICATIONS:
-  - SQL Bootcamp — Udemy
-  - Complete MLOps Bootcamp — Udemy
-  - PySpark: Building Data Pipelines — LinkedIn Learning
 
 ────────────────────────────────────────────────────────────────────────────────
 JOB DESCRIPTION (read from job_description.txt)
@@ -146,64 +81,19 @@ STEP 8 — OUTPUT (CV)
   - The existing document structure and section order.
   Do NOT include any explanation or commentary — output raw LaTeX only.
 
-STEP 9 — GENERATE COVER LETTER (cl.tex)
-  After outputting the CV, generate a professional cover letter and save it as
-  cl.pdf in the output folder.
+TONE & STYLE RULES:
+  - Professional yet personable — not stiff or robotic.
+  - Confident, not arrogant.
+  - No clichés: do NOT use phrases like "I am a hard worker",
+    "passionate team player", "go-getter", or "think outside the box".
+  - Keep total length to 300–400 words (body only, excluding header/sign-off).
+  - Plain text format only — no markdown, no LaTeX, no bullet points.
+  - Do NOT fabricate company names, hiring manager names, or role details
+    not present in the job description.
 
-  CANDIDATE DETAILS TO INCLUDE IN THE HEADER:
-    Name    : Siddhartha Shakya
-    Email   : siddhuushakyaa@gmail.com
-    Phone   : +971 55 183 0660
-    LinkedIn: https://www.linkedin.com/in/sidShkya/
-    GitHub  : https://github.com/SiddhuShkya
-    Location: UAE, Dubai
-    Date    : [today's date, e.g. 23 June 2026]
-
-  COVER LETTER STRUCTURE:
-    1. Header
-       - Candidate name, email, phone, LinkedIn, GitHub, location, date
-       - Hiring manager name/title if mentioned in the JD; otherwise use
-         "Hiring Manager"
-       - Company name if mentioned in the JD; otherwise use "the company"
-
-    2. Opening paragraph (3–4 sentences)
-       - State the exact job title you are applying for.
-       - Briefly mention how you found out about the role (omit if unknown).
-       - Hook with your most compelling, role-relevant achievement.
-
-    3. Body paragraph 1 — Technical Fit (4–5 sentences)
-       - Map your strongest technical skills to the JD's required skills.
-       - Reference 1–2 concrete examples from your work experience or projects
-         with quantified results.
-       - Use keywords from the job description naturally.
-
-    4. Body paragraph 2 — Role Alignment & Motivation (3–4 sentences)
-       - Explain why this specific role/company excites you.
-       - Connect your background to the company's mission or the role's impact.
-       - Show genuine enthusiasm without generic filler phrases.
-
-    5. Closing paragraph (2–3 sentences)
-       - Express eagerness for an interview.
-       - Include a clear call to action.
-       - Thank the reader for their time.
-
-    6. Sign-off
-       - Use: Sincerely, / Best regards,
-       - Full name: Siddhartha Shakya
-
-  TONE & STYLE RULES:
-    - Professional yet personable — not stiff or robotic.
-    - Confident, not arrogant.
-    - No clichés: do NOT use phrases like "I am a hard worker",
-      "passionate team player", "go-getter", or "think outside the box".
-    - Keep total length to 300–400 words (body only, excluding header/sign-off).
-    - Plain text format only — no markdown, no LaTeX, no bullet points.
-    - Do NOT fabricate company names, hiring manager names, or role details
-      not present in the job description.
-
-  OUTPUT:
-    Write the full cover letter in cl.tex and compile it to get cl.pdf.
-    Do NOT include any explanation or commentary — output the letter only.
+OUTPUT:
+  Write the full cover letter in cl.tex and compile it to get cl.pdf.
+  Do NOT include any explanation or commentary — output the letter only.
 
 ────────────────────────────────────────────────────────────────────────────────
 QUALITY CHECKLIST — CV (verify before outputting)
@@ -216,16 +106,5 @@ QUALITY CHECKLIST — CV (verify before outputting)
   [ ] Document compiles to exactly one page.
   [ ] No fabricated skills, tools, or experiences.
   [ ] LaTeX syntax is valid and all braces/environments are balanced.
-
-QUALITY CHECKLIST — COVER LETTER (verify before outputting)
-────────────────────────────────────────────────────────────────────────────────
-  [ ] Header includes name, email, phone, LinkedIn, GitHub, location, date.
-  [ ] Opening paragraph states the exact job title.
-  [ ] At least one quantified achievement from the candidate's background.
-  [ ] JD keywords appear naturally in the body (not keyword-stuffed).
-  [ ] Total body word count is 300–400 words.
-  [ ] No clichés or generic filler phrases.
-  [ ] No fabricated details not present in the JD or candidate background.
-  [ ] Plain text only — no markdown, bullets, or special formatting.
 
 ================================================================================
