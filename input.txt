@@ -1,1 +1,1 @@
-I've pasted a job description in input/job_description.txt. Please read input/prompt.txt and input/job_description.txt, then rewrite src/cv.tex accordingly, compile it, and generate resulting cv.pdf using the makefile make command.
+I've pasted a job description in input/job_description.txt. Please read input/prompt.txt and input/job_description.txt, then rewrite src/cv.tex accordingly, compile it, and generate resulting cv.pdf using the makefile make command. 

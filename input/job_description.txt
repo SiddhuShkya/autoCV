@@ -6,24 +6,58 @@
 --------------------------------------------------------------------------------
 
 Full job description
-We are looking for engineers who can build real-world applications, not just solve problems in isolation, using telecom APIs and modern technologies.
+Hiring: Junior Full-Stack Developer (Next.js + FastAPI) – Part-Time / Full Time On-Site
 
-What You’ll Do
+Location: Location: Dubai, UAE - Hybrid
+Duration: Part Time/ Contract Basis.
+Hours: Part-Time (20 hours per week, flexible weekly schedule), Full time 40 Hours per week.
+Salary: Competitive monthly retainer Salary or project-based contract rate.
+Legal Requirement: Must hold your own valid UAE Visa (Spouse/Family sponsorship, Student Visa, or Freelance Visa)
+Work Arrangement
 
-Design and build scalable backend systems and APIs
-Integrate third-party APIs (telecom, fintech, identity, etc.)
-Develop end-to-end applications (backend + frontend if full-stack)
-Translate real-world problems into working prototypes/MVPs
-Write clean, maintainable, and production-ready code
-Collaborate with cross-functional teams to ship features
-What We’re Looking For
+This is a hybrid role.
 
-Strong fundamentals in data structures, system design, and APIs
-Experience with backend frameworks (Node.js, Java, Python, etc.)
-Understanding of REST APIs, databases, and cloud basics
-Ability to build and deploy working applications
-Problem-solving mindset with a focus on real-world use cases
-Pay: AED200,000.00 - AED250,000.00 per year
+We prefer someone who can spend time working on-site with the founder during key development phases to collaborate, review features, and make product decisions together. Remote work is absolutely fine for the remaining days, provided communication and progress remain consistent.
+
+About Company:
+We are an early-stage FinTech SaaS company (Registered in Dubai) building a modern portfolio risk management platform. The core application is already built. The founder has full technical and product clarity and will guide you step-by-step.
+
+In this role, you will translate clear technical direction into clean, production-ready code, helping accelerate our upcoming product launch. This is an exceptional opportunity to gain hands-on experience deploying a complex financial technology application and a brilliant opportunity to get a financial SaaS product launch on your resume.
+
+Technical Stack & Tools
+
+Frontend: Next.js (App Router), React, TypeScript, Tailwind CSS
+Backend: FastAPI (Python), PostgreSQL, SQLAlchemy
+Version Control: Git / GitHub
+Workflow Optimization: Advanced proficiency leveraging AI development assistants (e.g., Claude, ChatGPT) to accelerate debugging, boilerplate generation, and codebase exploration.
+What You Will Do (Under Direct Founder Guidance)
+
+Write Next.js frontend code to match dashboard mockups.
+Hook up backend FastAPI endpoints to our PostgreSQL database.
+Complete basic user authentication and profile management steps.
+Debug existing workflows and test the application alongside the founder.
+Profile We Are Looking For
+
+Based in Dubai: Able to commute to our office regularly. Office is located 5 minutes of walk from Dubai Metro.
+Technical Foundation: Demonstrated experience building and deploying functional projects utilizing Next.js and Python/FastAPI (academic or personal portfolio projects are acceptable).
+Legal Visa Status: You already possess a valid UAE residency visa; we will provide the necessary part-time work permit/NOC approvals from Meydan Free Zone.
+AI-Leveraged: You know how to effectively prompt and use AI tools (like Claude) to debug, write boilerplate code, optimize coding efficiency, troubleshoot errors, and speed up delivery times.
+What We Offer
+
+Zero corporate red tape—immediate decision-making.
+Clean, documented codebase ready for final execution.
+Opportunity to make a real impact on the product and technical direction.
+Long-term growth opportunities as the company expands.
+How to Apply:
+Please send your resume along with brief summary of your experience deploying production applications. A link to your GitHub profile or a sample project link built using Next.js or FastAPI.
+
+Important Note on Applicant Safety:
+
+No fees or payments are required at any stage of this hiring process.
+We do not sell or require any training courses or certifications.
+We will never request sensitive financial information during recruitment.
+All communication will come from official company channels only.
+Pay: AED4,000.00 - AED8,000.00 per month
 
 Work Location: Hybrid remote in Dubai (Dubai)
 

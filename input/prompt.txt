@@ -14,6 +14,103 @@ JOB DESCRIPTION (read from job_description.txt)
  target to tailor the CV against.]
 
 ────────────────────────────────────────────────────────────────────────────────
+GENERAL CV INFO — CANDIDATE BACKGROUND (Siddhartha Shakya)
+────────────────────────────────────────────────────────────────────────────────
+
+CONTACT
+  Name    : Siddhartha Shakya
+  Location: UAE, Dubai  (https://maps.google.com/?q=Dubai,UAE)
+  Phone   : +971 55 183 0660  (tel:+971551830660)
+  Email   : siddhuushakyaa@gmail.com  (mailto:siddhuushakyaa@gmail.com)
+  LinkedIn: https://www.linkedin.com/in/sidShkya/
+  GitHub  : https://github.com/SiddhuShkya
+  Website : https://siddhushkya.github.io/my-portfolio/
+
+────────────────────────────────────────────────────────────────────────────────
+PROFILE SUMMARY
+  First-Class Honors Computer Science graduate with hands-on experience in data
+  science and analytics. Proficient and confident in Python, SQL, and Excel with
+  proven ability to design and build efficient data pipelines. Demonstrated
+  expertise through real-world projects including financial data analysis,
+  geospatial analytics, and workflow automation. Committed to delivering
+  impactful, data-driven solutions.
+
+────────────────────────────────────────────────────────────────────────────────
+TECHNICAL SKILLS
+  Languages        : Python, SQL, C/C++
+  AI & ML          : PyTorch, Scikit-learn, NumPy
+  Data Engineering : Databricks, Apache Airflow, Snowflake, dbt
+  Data Analytics   : Pandas, Matplotlib, Seaborn, Streamlit, Jupyter Notebooks, Excel
+  Databases        : MySQL, PostgreSQL, MongoDB
+  DevOps & Tools   : Docker, MLflow, Git, GitHub, GitHub Actions (CI/CD), YAML
+
+────────────────────────────────────────────────────────────────────────────────
+WORK EXPERIENCE
+
+  [1] AI Intern | Mach24 Orbitals                             Oct 2025 – Feb 2026
+    - Designed and implemented an automated geospatial data extraction system
+      leveraging GEE (Google Earth Engine) API to retrieve satellite imagery from
+      specified areas of interest (AOI) across custom time ranges, eliminating
+      manual data download processes and reducing processing time.
+    - Owned end-to-end data pipeline responsibility: automated data ingestion,
+      quality assurance, cleaning, normalization, and feature engineering to ensure
+      data reliability for analytics and model training.
+
+  [2] Graduate Teaching Assistant | Herald College Kathmandu  Aug 2024 – Sep 2025
+    - Developed comprehensive Big Data curriculum covering Hadoop ecosystem, SQL
+      and MongoDB databases, Python, and PySpark; delivered hands-on labs and
+      practical assignments to 120+ students, achieving 15% improvement in
+      assessment scores.
+    - Architected and delivered High Performance Computing (HPC) technical
+      workshops on parallel programming, concurrent programming, C/C++, and CUDA
+      GPU computing; created practical labs that enhanced student mastery of
+      performance optimization techniques.
+
+────────────────────────────────────────────────────────────────────────────────
+PROJECTS
+
+  [1] EduFin Investigation | Financial Risk Analysis                          2026
+      GitHub: https://github.com/SiddhuShkya/Databricks-EduFin-Investigation
+    - Built and optimized data pipelines in Databricks using PySpark and SQL to
+      ingest and analyze a 15,000+ student loan portfolio, uncovering a Rs. 12
+      Crore financial discrepancy.
+    - Identified critical risk patterns through segmentation analysis, isolating
+      high-risk regions, customer profiles, and partner institutions to inform
+      data-driven risk mitigation strategies.
+    - Tech Stack: Python, Databricks, PySpark SQL, Delta Tables, Data Pipelines, Claude
+
+  [2] NYC Parking Violations | Data Pipeline                                  2025
+      GitHub: https://github.com/SiddhuShkya/nyc-parking-dbt-pipeline
+    - Built a multi-layer Medallion Architecture (Bronze/Silver/Gold) ELT pipeline
+      transforming raw NYC parking violation data from NYC Open Data into
+      analytics-ready metric tables.
+    - Automated production deployments using GitHub Actions CI/CD with separate
+      dev/prod DuckDB profiles.
+    - Tech Stack: dbt Core, DuckDB, SQL, Python, Jupyter Notebook, GitHub Actions, YAML
+
+────────────────────────────────────────────────────────────────────────────────
+EDUCATION
+
+  PG Diploma in Data Science                               Feb 2026 – present
+    Institution: Manipal Academy of Higher Education
+
+  BSc (Hons) in Computer Science                           Feb 2022 – Jun 2024
+    Institution: University of Wolverhampton
+    Honors: First Class
+
+────────────────────────────────────────────────────────────────────────────────
+CERTIFICATIONS
+
+  AI Fluency: Framework & Foundations | Anthropic
+    Certificate: https://verify.skilljar.com/c/azo7p3jpj66r
+
+  MLOps Bootcamp | Udemy
+    Certificate: https://www.udemy.com/certificate/UC-864e71bf-b3fd-4c82-a31d-8db799454870/
+
+  SQL Bootcamp | Udemy
+    Certificate: https://www.udemy.com/certificate/UC-5aa96a48-14df-4219-868c-68d9ea1658c2/
+
+────────────────────────────────────────────────────────────────────────────────
 YOUR TASK — STEP-BY-STEP INSTRUCTIONS
 ────────────────────────────────────────────────────────────────────────────────
 
