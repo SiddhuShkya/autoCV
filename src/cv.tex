@@ -48,13 +48,13 @@
 %----------------------------------------------------------------------------------------
 \usepackage{url}
 \usepackage{parskip} 	
-\setlength{\parskip}{3.5pt}
+\setlength{\parskip}{2pt}
 
 %other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[left=0.5in, right=0.5in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage[left=0.35in, right=0.35in, top=0.25in, bottom=0.25in]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -79,7 +79,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{4pt}
+\titlespacing{\section}{0pt}{3pt}{1.5pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -114,7 +114,7 @@
     \textbf{#1} & \hfill &  #2 \\[2pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1.5pt,label=--]
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=--]
     }
     {
     \end{itemize}
@@ -135,7 +135,7 @@
 
 % Current Header Style: Centered Name and Contact Links
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\fontsize{30pt}{40pt}\selectfont Siddhartha Shakya \\[7pt]
+\fontsize{26pt}{30pt}\selectfont Siddhartha Shakya \\[5pt]
 \href{https://siddhushkya.github.io/my-portfolio/}{Portfolio} $|$ 
 \href{https://www.linkedin.com/in/sidShkya/}{LinkedIn} $|$ 
 \href{https://github.com/SiddhuShkya}{GitHub} $|$ 
@@ -148,6 +148,9 @@
 %	PROFILE SUMMARY
 %----------------------------------------------------------------------------------------
 \section{Profile Summary}
+
+\vspace{5pt}
+
 Quick learner and highly efficient \textbf{Computer Science graduate} currently pursuing 
 \textbf{PG Diploma in Data Science} (evening batch) at MAHE Dubai. Proficient in \textbf{Python}, 
 \textbf{SQL}, and \textbf{Excel} with hands-on experience in data science projects revolving around 
@@ -158,8 +161,11 @@ measurable business impact. Valid UAE work authorization on \textbf{student visa
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
+
+\vspace{5pt}
+
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages}          & Python, SQL, C/C++ \\
+\textbf{Languages}          & Python, JavaScript, SQL, C/C++ \\
 \textbf{Databases}          & PostgreSQL, MySQL, MongoDB, SQLite \\
 \textbf{Data Analytics}     & Pandas, Matplotlib, Seaborn, Streamlit, Excel \\
 \textbf{Data Engineering}   & Databricks, Apache Airflow, Snowflake, dbt, PySpark \\
@@ -172,7 +178,17 @@ measurable business impact. Valid UAE work authorization on \textbf{student visa
 %----------------------------------------------------------------------------------------
 \section{Work Experience}
 
-% Job 1: AI Intern
+\vspace{5pt}
+
+% Job 1: Backend AI Engineer
+\begin{joblong}{Backend AI Engineer (Remote) $|$ \normalfont\textit{FlyRank AI}}{\textbf{Jun 2026} -- \textit{Present}}
+\item Built \textbf{5+} backend services using Node.js/Express and Python/Flask, delivering RESTful APIs with validation, error handling, and structured documentation.
+\item Developed \textbf{3+} database-driven applications with Supabase Auth, SQLite/PostgreSQL, and Docker Compose, improving deployment consistency and enabling secure, persistent backend workflows.
+\end{joblong}
+
+\vspace{-5pt}
+
+% Job 2: AI Intern
 \begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{\textbf{Oct 2025 -- Feb 2026}}
 \item Designed and implemented an automated geospatial data extraction system leveraging GEE (Google Earth Engine) API to retrieve \textbf{1,000+} satellite imagery datasets monthly across custom AOIs and timeframes, eliminating manual download processes and reducing data acquisition time by \textbf{75\%}.
 \item Owned end-to-end data pipeline responsibility: processed \textbf{1,000+} monthly datasets through automated ingestion, quality assurance, and normalization, achieving \textbf{83\%} data accuracy and reducing manual preprocessing time by \textbf{60\%}.
@@ -180,7 +196,7 @@ measurable business impact. Valid UAE work authorization on \textbf{student visa
 
 \vspace{-5pt}
 
-% Job 2: Teaching Assistant
+% Job 3: Teaching Assistant
 \begin{joblong}{Graduate Teaching Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{\textbf{Aug 2024 -- Sep 2025}}
 \item Developed comprehensive Big Data curriculum covering Hadoop ecosystem, SQL and MongoDB databases, Python, and PySpark; delivered hands-on labs and practical assignments to \textbf{120+} students, achieving \textbf{15\%} improvement in assessment scores.
 \item Architected and delivered High Performance Computing (HPC) workshops on parallel programming, C/C++, and CUDA GPU computing; built a password-cracking lab showcasing \textbf{6x speedup} via multithreading and \textbf{40x speedup} via CUDA over a single-core baseline.
@@ -190,6 +206,8 @@ measurable business impact. Valid UAE work authorization on \textbf{student visa
 %	PROJECTS
 %----------------------------------------------------------------------------------------
 \section{Projects}
+
+\vspace{5pt}
 
 % Project 1: EduFin
 \begin{joblong}{EduFin Investigation $|$ \normalfont{\textit{Financial Data Analytics}}} {\textbf{2026}}
@@ -209,23 +227,25 @@ measurable business impact. Valid UAE work authorization on \textbf{student visa
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
-\textbf{PG Diploma in Data Science} \hfill \textbf{Feb 2026} -- \textit{present} \\
-\vspace{-15pt}
-\begin{itemize}[nosep, leftmargin=1.5em, itemsep=1pt, label=--]
-    \item \textit{Manipal Academy of Higher Education}
-\end{itemize}
 
-\textbf{BSc (Hons) in Computer Science} \hfill \textbf{Feb 2022 -- Jun 2024} \\
-\vspace{-15pt}
-\begin{itemize}[nosep, leftmargin=1.5em, itemsep=1pt, label=--]
-    \item \textit {University of Wolverhampton}
-    \item Honors: \textbf{First Class}
-\end{itemize}
+\vspace{5pt}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{PG Diploma in Data Science} $|$ \normalfont\textit{MAHE Dubai} & \textbf{Feb 2026} -- \textit{present} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{BSc (Hons) in Computer Science} $|$ \normalfont\textit{University of Wolverhampton} & \textbf{Feb 2022 -- Jun 2024} \\
+\textit{Honors: \textbf{First Class}} &  \\
+\end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	CERTIFICATIONS
 %----------------------------------------------------------------------------------------
 \section{Certifications}
+
+\vspace{5pt}
+
 \begin{tabularx}{\linewidth}{@{}p{0.45\linewidth} >{\raggedright\arraybackslash}X r@{}}
 \textbf{AI Fluency: Framework \& Foundations}     & Anthropic & \textbf{2026} \\
 \textbf{MLOps Bootcamp}                           & Udemy     & \textbf{2025} \\
