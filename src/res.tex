@@ -1,0 +1,235 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.7.4, 30 July 2025) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+\documentclass[10pt,a4paper,withhyper,normalphoto]{altacv}
+
+%% AltaCV uses the fontawesome5 and simpleicons packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\graphicspath{{photo/}{../photo/}}
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+% WHEN COMPILING WITH XELATEX PLEASE USE
+% xelatex -shell-escape -output-driver="xdvipdfmx -z 0" sample.tex
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+% If your CV/résumé is in a language other than English,
+% then you probably want to change these so that when you
+% copy-paste from the PDF or run pdftotext, the location
+% and date marker icons for \cvevent will paste as correct
+% translations. For example Spanish:
+% \renewcommand{\locationname}{Ubicación}
+% \renewcommand{\datename}{Fecha}
+
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear}
+
+%% The bibliography support files are not included in this repo, so they are
+%% disabled here to keep the resume build self-contained.
+% \input{pubs-num}
+% \addbibresource{sample.bib}
+
+\begin{document}
+\name{Siddhartha Shakya}
+\tagline{Data Entry Specialist}
+%% You can add multiple photos on the left or right
+\photoR{3cm}{SIDDHARTHA_SHAKYA_PHOTO.jpeg}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{siddhuushakyaa@email.com}
+  \phone{+971 55 183 0660}
+  \location{Dubai, UAE}
+  \homepage{siddhushkya.github.io/my-portfolio/}
+  \linkedin{linkedin.com/in/sidshkya/}
+  \github{github.com/SiddhuShkya}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Profile}
+\justifying
+Detail-oriented and computer-literate candidate with a strong foundation in data management, inventory record-keeping, and database systems. Proven track record of managing large volumes of data, maintaining strict documentation accuracy, and streamlining reporting workflows. Skilled in data entry, stock verification, and cross-departmental coordination.
+
+\cvsection{Experience}
+
+\cvevent{Database \& Backend Assistant (Remote)}{FlyRank AI}{June 2026 -- Ongoing} {Dubai, UAE}
+\begin{itemize}
+\item Maintained system logs and transaction records using database tools to ensure zero data loss.
+\item Performed routine system entries and audit checks to ensure consistency across digital records.
+\end{itemize}
+
+\divider
+
+\cvevent{Data \& Administrative Assistant}{Mach24 Orbitals}{October 2025 -- Feburary 2026} {Lalitpur, Nepal}
+\begin{itemize}
+\item Standardized intake documentation processes, reducing manual verification time by 60
+\%.
+\item Prepared structured summary reports and logs to monitor data inventory and system discrepancies.
+\end{itemize}
+
+\divider
+
+\cvevent{Graduate Assistant \& Operations Support}{Herald College Kathmandu}{August 2024 -- Sep 2025}{Kathmandu, Nepal}
+\begin{itemize}
+\item Maintained database records, technical documentation, and student logs using SQL and structured databases
+for over 120+ users.
+\item Prepared regular administrative reports, tracking document verification, attendance records, and system entries.
+\end{itemize}
+
+\cvsection{Education}
+
+\cvevent{Manipal Academy of Higher Education}{PG Diploma in Data Science}{Feburary 2026 -- present}{Dubai, UAE}
+
+\divider
+
+\cvevent{Herald College Kathmandu}{BSc. (Hons) in Computer Science}{Feburary 2022 -- June 2024}{Kathmandu. Nepal}
+
+\medskip
+
+
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\switchcolumn
+
+\cvsection{My Life Philosophy}
+
+\begin{quote}
+``I am not defined by what I already know, but by my willingness to keep learning.''
+\end{quote}
+
+
+\cvsection{Strengths}
+
+% Don't overuse these \cvtag boxes — they're just eye-candies and not essential. If something doesn't fit on a single line, it probably works better as part of an itemized list (probably inlined itemized list), or just as a comma-separated list of strengths.
+
+\cvtag{Hard working}
+\cvtag{Excellent Typing} \\
+
+\cvtag{Attention to detail}
+\cvtag{Good Communication} \\
+\cvtag{Data Management}
+\cvtag{Time Management}
+
+\divider\smallskip
+
+\cvtag{Microsoft Excel}
+\cvtag{Microsoft Word}\\
+
+\cvtag{Google Sheets}
+\cvtag{SQL}
+\cvtag{NoSQL (MongoDB}
+
+\cvsection{Languages}
+
+\cvskill{English}{4}
+\divider
+
+\cvskill{Hindi}{4}
+\divider
+
+\cvskill{Nepali}{5} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+\cvsection{Achievements}
+
+\cvachievement{\faTrophy}{Awarded AAA Scholarship}{Recognized for excellence in Academics, Attitude, and Attendance throughout my academic journey}
+
+\divider
+
+\cvachievement{\faGraduationCap}{First Class Honors}{Graduated with distinction, reflecting consistent academic performance and dedication}
+
+\cvsection{Additional Info}
+
+\begin{itemize}
+\item \textbf{Visa Status:} Student Visa
+\item \textbf{Visa Sponsor:} Manipal Academy of Higher Education
+\item \textbf{Class Schedule:} Evening Batch (7:00 PM -- 10:00 PM)
+\item \textbf{Availability:} Immediately
+\end{itemize}
+
+\end{paracol}
+
+\end{document}

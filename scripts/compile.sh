@@ -12,8 +12,10 @@ fi
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-SRC_DIR="$(dirname "$(realpath "$TEX_FILE")")"
+TEX_FILE="$(realpath "$TEX_FILE")"
+SRC_DIR="$(dirname "$TEX_FILE")"
 DOCNAME="$(basename "$TEX_FILE" .tex)"
+TEX_BASENAME="$(basename "$TEX_FILE")"
 
 BUILD_DIR="$PROJECT_ROOT/build"
 OUTPUT_DIR="$PROJECT_ROOT/output"
@@ -22,14 +24,20 @@ mkdir -p "$BUILD_DIR" "$OUTPUT_DIR"
 
 echo ">> Compiling $DOCNAME..."
 
-# Pass 1: pdflatex (generates .aux, .bcf etc in build/)
-pdflatex --interaction=nonstopmode --output-directory="$BUILD_DIR" "$TEX_FILE"
+(
+  cd "$SRC_DIR"
 
-# Pass 2: biber for bibliography
-biber --input-directory="$BUILD_DIR" --output-directory="$BUILD_DIR" "$DOCNAME" || true
+  # Pass 1: pdflatex (generates .aux, .bcf etc in build/)
+  pdflatex --interaction=nonstopmode --output-directory="$BUILD_DIR" "$TEX_BASENAME"
 
-# Pass 3: pdflatex again to resolve references
-pdflatex --interaction=nonstopmode --output-directory="$BUILD_DIR" "$TEX_FILE"
+  # Pass 2: biber for bibliography when the document needs it
+  if [ -f "$BUILD_DIR/$DOCNAME.bcf" ]; then
+    biber --input-directory="$BUILD_DIR" --output-directory="$BUILD_DIR" "$DOCNAME" || true
+  fi
+
+  # Pass 3: pdflatex again to resolve references
+  pdflatex --interaction=nonstopmode --output-directory="$BUILD_DIR" "$TEX_BASENAME"
+)
 
 # Move PDF to output/
 mv "$BUILD_DIR/$DOCNAME.pdf" "$OUTPUT_DIR/$DOCNAME.pdf"
