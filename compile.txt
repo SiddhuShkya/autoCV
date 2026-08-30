@@ -1,5 +1,8 @@
+# For ats_cv:
+./scripts/compile.sh src/ats_cv.tex SIDDHARTHA_SHAKYA_ATS_CV.pdf
+
 # For cv:
-./scripts/compile.sh src/cv.tex 
+./scripts/compile.sh src/cv.tex SIDDHARTHA_SHAKYA_CV.pdf
 
 # For cl:
-./scripts/compile.sh src/cl.tex
+./scripts/compile.sh src/cl.tex SIDDHARTHA_SHAKYA_CL.pdf

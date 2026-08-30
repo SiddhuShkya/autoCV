@@ -1,0 +1,260 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]{Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+\setlength{\parskip}{2pt}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[left=0.35in, right=0.35in, top=0.25in, bottom=0.25in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{1.5pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[2pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	HEADER / TITLE
+%----------------------------------------------------------------------------------------
+
+% Current Header Style: Centered Name and Contact Links
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\fontsize{26pt}{30pt}\selectfont Siddhartha Shakya \\[5pt]
+\href{https://siddhushkya.github.io/my-portfolio/}{Portfolio} $|$ 
+\href{https://www.linkedin.com/in/sidshkya/}{LinkedIn} $|$ 
+\href{https://github.com/SiddhuShkya}{GitHub} $|$ 
+\href{mailto:siddhuushakyaa@gmail.com}{siddhuushakyaa@gmail.com} $|$ 
+\href{https://www.google.com/maps/place/International+City,+Morocco+1/@25.204338,55.270563,17z/data=!3m1!4b1!4m5!3m4!1s0x3e5f43c8f8f8f8f8:0x3e5f43c8f8f8f8f8!8m2!3d25.204338!4d55.270563}{Dubai, UAE} $|$ 
+\href{tel:+971551830660}{+971 55 183 0660} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PROFILE SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Profile Summary}
+
+\vspace{5pt}
+
+Quick learner and highly efficient \textbf{Computer Science graduate} currently pursuing 
+\textbf{PG Diploma in Data Science} (evening batch) at MAHE Dubai. Proficient in \textbf{Python}, 
+\textbf{SQL}, and \textbf{Excel} with hands-on experience in data science projects revolving around 
+data \textbf{analytics}, \textbf{engineering} and \textbf{AI/ML}. Proven ability to deliver data-driven solutions that create 
+measurable business impact. Valid UAE work authorization on \textbf{student visa}.
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+
+\vspace{5pt}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Languages}          & Python, SQL, C/C++ \\
+\textbf{Databases}          & PostgreSQL, MySQL, MongoDB, SQLite \\
+\textbf{Data Analytics}     & Pandas, Matplotlib, Seaborn, Streamlit, Excel \\
+\textbf{Data Engineering}   & Databricks, Apache Airflow, Snowflake, dbt, PySpark \\
+\textbf{AI \& ML}           & PyTorch, Scikit-learn, NumPy, Jupyter Notebooks, Google Colab \\
+\textbf{DevOps \& Tools}    & Docker, Git/GitHub, GitHub Actions (CI/CD), REST APIs, Linux, MLflow \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+
+\vspace{5pt}
+
+% Job 1: Backend AI Engineer
+\begin{joblong}{Backend AI Engineer (Remote) $|$ \normalfont\textit{FlyRank AI}}{\textbf{Jun 2026} -- \textit{Present}}
+\item Developed an AI usage-metering and billing engine in Node.js, enforcing subscription tier quotas and integrating Stripe webhooks. 
+\item Delivered RESTful APIs with validation, error handling, and structured documentation.
+\end{joblong}
+
+\vspace{1pt}
+
+% Job 2: AI Intern
+\begin{joblong}{AI Intern $|$ \normalfont\textit{Mach24 Orbitals}}{\textbf{Oct 2025 -- Feb 2026}}
+\item Designed and implemented an automated geospatial data extraction system leveraging GEE (Google Earth Engine) API to retrieve \textbf{1,000+} satellite imagery datasets monthly across custom AOIs and timeframes, eliminating manual download processes and reducing data acquisition time by \textbf{75\%}.
+\item Owned end-to-end data pipeline responsibility: processed \textbf{1,000+} monthly datasets through automated ingestion, quality assurance, and normalization, achieving \textbf{83\%} data accuracy and reducing manual preprocessing time by \textbf{60\%}.
+\end{joblong}
+
+\vspace{1pt}
+
+% Job 3: Teaching Assistant
+\begin{joblong}{Graduate Teaching Assistant $|$ \normalfont\textit{Herald College Kathmandu}}{\textbf{Aug 2024 -- Sep 2025}}
+\item Developed comprehensive Big Data curriculum covering Hadoop ecosystem, SQL and MongoDB databases, Python, and PySpark; delivered hands-on labs and practical assignments to \textbf{120+} students, achieving \textbf{15\%} improvement in assessment scores.
+\item Architected and delivered High Performance Computing (HPC) workshops on parallel programming, C/C++, and CUDA GPU computing; built a password-cracking lab showcasing \textbf{6x speedup} via multithreading and \textbf{40x speedup} via CUDA over a single-core baseline.
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+\vspace{5pt}
+
+% Project 1: EduFin
+\begin{joblong}{EduFin Investigation $|$ \normalfont{\textit{Financial Data Analytics}}} {\textbf{2026}}
+\item Built and optimized data pipelines in Databricks using PySpark and SQL to ingest and analyze a 15,000+ student loan portfolio, uncovering a Rs.\ 12 Crore financial discrepancy.
+\item Identified critical risk patterns through segmentation analysis, isolating high-risk regions, customer profiles, and partner institutions to inform data-driven risk mitigation strategies.
+\item \textbf{Tech Stack:} Python, Databricks, PySpark SQL, Delta Tables, Data Pipelines
+\end{joblong}
+
+% Project 2: NYC Parking Violations
+\begin{joblong}{NYC Parking Violations $|$ \normalfont{\textit{Data Engineering}}} {\textbf{2025}}
+\item Built a multi-layer Medallion Architecture (Bronze/Silver/Gold) ELT pipeline transforming raw NYC parking violation data from NYC Open Data into analytics-ready metric tables.
+\item Automated production deployments using GitHub Actions with separate dev/prod DuckDB profiles.
+\item \textbf{Tech Stack:} dbt Core, DuckDB, SQL, Python, Jupyter Notebook, GitHub Actions, YAML
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\vspace{5pt}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{PG Diploma in Data Science} $|$ \normalfont\textit{MAHE Dubai} & \textbf{Feb 2026} -- \textit{present} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{BSc (Hons) in Computer Science} $|$ \normalfont\textit{University of Wolverhampton} & \textbf{Feb 2022 -- Jun 2024} \\
+\textit{Honors: \textbf{First Class}} &  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+
+\vspace{5pt}
+
+\begin{tabularx}{\linewidth}{@{}p{0.45\linewidth} >{\raggedright\arraybackslash}X r@{}}
+\textbf{AI Fluency: Framework \& Foundations}     & Anthropic & \textbf{2026} \\
+\textbf{MLOps Bootcamp}                           & Udemy     & \textbf{2025} \\
+\textbf{SQL Bootcamp}                             & Udemy     & \textbf{2025}
+\end{tabularx}
+
+\vfill
+\begin{center}
+\footnotesize Last updated: \today
+\end{center}
+
+\end{document}

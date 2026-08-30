@@ -12,7 +12,7 @@ The template is designed to be clean with sections for
 ## Quickstart
 - Generate your copy of the repo using the `Use this template` button
 - Give the workflow write permissions for your forked repo (Settings -> Actions -> General)
-- Modify the `cv.tex` file and push changes to your repo
+- Modify the `ats_cv.tex` or `cv.tex` file and push changes to your repo
 - Set GitHub pages source to build branch (Settings -> Pages)
 - The complied PDF will be available under the `build` branch
 

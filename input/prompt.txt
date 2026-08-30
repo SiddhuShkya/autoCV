@@ -170,7 +170,7 @@ STEP 7 — ONE-PAGE ENFORCEMENT (CRITICAL RULE)
   - Do NOT remove the header, education, or profile summary sections.
 
 STEP 8 — OUTPUT (CV)
-  Return the COMPLETE, ready-to-compile src/cv.tex file with ALL changes applied.
+  Return the COMPLETE, ready-to-compile src/ats_cv.tex file with ALL changes applied.
   Preserve:
   - All LaTeX preamble, packages, and custom environments (jobshort, joblong).
   - All hyperlinks (GitHub, LinkedIn, email, phone, location, project links).
