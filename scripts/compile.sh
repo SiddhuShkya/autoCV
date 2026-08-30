@@ -17,6 +17,12 @@ SRC_DIR="$(dirname "$TEX_FILE")"
 DOCNAME="$(basename "$TEX_FILE" .tex)"
 TEX_BASENAME="$(basename "$TEX_FILE")"
 
+OUT_NAME="${2:-$DOCNAME.pdf}"
+# Make sure OUT_NAME ends with .pdf
+if [[ "$OUT_NAME" != *.pdf ]]; then
+  OUT_NAME="${OUT_NAME}.pdf"
+fi
+
 BUILD_DIR="$PROJECT_ROOT/build"
 OUTPUT_DIR="$PROJECT_ROOT/output"
 
@@ -40,6 +46,6 @@ echo ">> Compiling $DOCNAME..."
 )
 
 # Move PDF to output/
-mv "$BUILD_DIR/$DOCNAME.pdf" "$OUTPUT_DIR/$DOCNAME.pdf"
+mv "$BUILD_DIR/$DOCNAME.pdf" "$OUTPUT_DIR/$OUT_NAME"
 
-echo ">> Done! PDF saved to output/$DOCNAME.pdf"
+echo ">> Done! PDF saved to output/$OUT_NAME"

@@ -8,10 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      # Edit here with the names of your latex file and directory (can use ".")
-      DIR: .
-      FILE: cv
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
@@ -20,8 +16,22 @@ jobs:
         with:
           root_file: cv.tex
           working_directory: src
-      - name: move
-        run: mkdir -p github_artifacts && mv src/*.pdf ./github_artifacts/
+      - name: Build Cover Letter
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: cl.tex
+          working_directory: src
+      - name: Build Resume
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: resume.tex
+          working_directory: src
+      - name: Organize and rename PDFs
+        run: |
+          mkdir -p github_artifacts
+          mv src/cv.pdf ./github_artifacts/SIDDHARTHA_SHAKYA_ATS_CV.pdf
+          mv src/cl.pdf ./github_artifacts/SIDDHARTHA_SHAKYA_CL.pdf
+          mv src/resume.pdf ./github_artifacts/SIDDHARTHA_SHAKYA_RESUME.pdf
       - name: Upload PDFs as artifacts
         uses: actions/upload-artifact@v4
         with:

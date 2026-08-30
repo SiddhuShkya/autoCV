@@ -1,13 +1,13 @@
-all: output/cv.pdf output/cl.pdf output/res.pdf
+all: output/SIDDHARTHA_SHAKYA_ATS_CV.pdf output/SIDDHARTHA_SHAKYA_CL.pdf output/SIDDHARTHA_SHAKYA_RESUME.pdf
 
-output/cv.pdf: src/cv.tex
-	./scripts/compile.sh src/cv.tex
+output/SIDDHARTHA_SHAKYA_ATS_CV.pdf: src/cv.tex
+	./scripts/compile.sh src/cv.tex SIDDHARTHA_SHAKYA_ATS_CV.pdf
 
-output/cl.pdf: src/cl.tex
-	./scripts/compile.sh src/cl.tex
+output/SIDDHARTHA_SHAKYA_CL.pdf: src/cl.tex
+	./scripts/compile.sh src/cl.tex SIDDHARTHA_SHAKYA_CL.pdf
 
-output/res.pdf: src/res.tex
-	./scripts/compile.sh src/res.tex
+output/SIDDHARTHA_SHAKYA_RESUME.pdf: src/resume.tex
+	./scripts/compile.sh src/resume.tex SIDDHARTHA_SHAKYA_RESUME.pdf
 
 clean:
 	rm -f build/*.aux build/*.bbl build/*.bcf build/*.blg build/*.fdb_latexmk \
@@ -15,4 +15,4 @@ clean:
 	       build/*.bbl-SAVE-ERROR
 
 distclean: clean
-	rm -f output/cv.pdf output/cl.pdf output/res.pdf
+	rm -f output/SIDDHARTHA_SHAKYA_ATS_CV.pdf output/SIDDHARTHA_SHAKYA_CL.pdf output/SIDDHARTHA_SHAKYA_RESUME.pdf
