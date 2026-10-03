@@ -1,161 +1,181 @@
-\documentclass[10pt,a4paper,withhyper,normalphoto]{altacv}
+%============================================================================%
+% One-page CV - Siddhartha Shakya
+% Design based on the MIT-licensed template by Jan Küster (2019), rebuilt with
+% two plain minipages (no paracol) so the columns can never get out of sync.
+% Photo: put "PHOTO.jpeg" next to this file (optional - skipped if missing).
+% Font: Computer Modern (LaTeX default, via Latin Modern)
+%============================================================================%
+\documentclass[10.5pt,a4paper]{article}
 
-\geometry{left=1cm,right=1cm,top=1.2cm,bottom=1.2cm,columnsep=1cm}
-
-\usepackage{paracol}
-\usepackage{ragged2e}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}            % Latin Modern = sharper Computer Modern
+% No \sfdefault: the serif Computer Modern Roman is the default text font
+\usepackage{moresize}
+\usepackage{fontawesome}
+\usepackage[a4paper,top=1cm,bottom=1cm,left=0.9cm,right=0.9cm]{geometry}
 \usepackage{graphicx}
-\graphicspath{{photo/}{../photo/}}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
 
-\iftutex
-  \setmainfont{Roboto Slab}
-  \setsansfont{Lato}
-  \renewcommand{\familydefault}{\sfdefault}
-\else
-  \usepackage[rm]{roboto}
-  \usepackage[defaultsans]{lato}
-  \renewcommand{\familydefault}{\sfdefault}
-\fi
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\definecolor{DarkPastelRed}{HTML}{450808}
-\definecolor{PastelRed}{HTML}{8F0D0D}
-\definecolor{GoldenEarth}{HTML}{E7D192}
-\colorlet{name}{black}
-\colorlet{tagline}{PastelRed}
-\colorlet{heading}{DarkPastelRed}
-\colorlet{headingrule}{GoldenEarth}
-\colorlet{subheading}{PastelRed}
-\colorlet{accent}{PastelRed}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
+% ---- colours -------------------------------------------------------------
+% 1. Ice blue (cooling / AC feel)
+\definecolor{maincol}{RGB}{0,120,190}
+\definecolor{darkcol}{RGB}{30,50,70}
+\definecolor{lightcol}{RGB}{230,238,245}
 
-\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
-\renewcommand{\personalinfofont}{\small\bfseries}
-\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
-\renewcommand{\cvsubsectionfont}{\large\bfseries}
+% ---- building blocks -----------------------------------------------------
+% section headline with coloured underline
+\newcommand{\cvsection}[1]{%
+  \vspace{9pt}%
+  {\raggedright\textbf{\large\textcolor{darkcol}{\MakeUppercase{#1}}}\par
+   \vspace{1pt}\textcolor{maincol}{\rule{0.3\linewidth}{2pt}}\par}%
+  \vspace{6pt}}
 
-\renewcommand{\cvItemMarker}{{\small\textbullet}}
-\renewcommand{\cvRatingMarker}{\faCircle}
+% contact line: icon name, text
+\newcommand{\cvcontact}[2]{%
+  \noindent\makebox[1.5em][l]{\textcolor{maincol}{\csname fa#1\endcsname}}%
+  \parbox[t]{\dimexpr\linewidth-1.5em\relax}{\raggedright #2}\par\vspace{5pt}}
 
+% small label above a value (personal details)
+\newcommand{\cvdetail}[2]{%
+  {\footnotesize\bfseries\textcolor{maincol}{\MakeUppercase{#1}}}\par
+  {\raggedright #2\par}\vspace{5pt}}
+
+% skill with bar: name, level label, fill 0..1
+\newcommand{\cvskill}[3]{%
+  \noindent\textbf{#1}\hfill\textcolor{maincol}{\small #2}\par\vspace{2pt}%
+  \noindent\textcolor{lightcol}{\rule{\linewidth}{3pt}}\hspace{-\linewidth}%
+  \textcolor{maincol}{\rule{#3\linewidth}{3pt}}\par\vspace{5pt}}
+
+% name on the left, value on the right (languages)
+\newcommand{\cvpair}[2]{\noindent\textbf{#1}\hfill\textcolor{darkcol}{#2}\par\vspace{4pt}}
+
+% job entry header: dates, title, employer
+\newcommand{\cvjob}[3]{%
+  \noindent\begin{tabular*}{\linewidth}{@{}p{0.68\linewidth}@{\extracolsep{\fill}}r@{}}
+    \textbf{#2} & \colorbox{maincol}{\textcolor{white}{\small\ #1\ }}\\[2pt]
+    \textcolor{maincol}{\textbf{#3}} & \\
+  \end{tabular*}\par\vspace{4pt}}
+
+\newenvironment{cvbullets}
+  {\begin{itemize}[leftmargin=1.2em,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+  {\end{itemize}}
+
+%============================================================================%
 \begin{document}
-\name{Siddhartha Shakya}
-\tagline{Agentic AI \& Automation Engineer}
-\photoR{3cm}{SIDDHARTHA_SHAKYA_PHOTO.jpeg}
+\noindent
+% ------------------------------ LEFT COLUMN ---------------------------------
+\begin{minipage}[t]{0.35\textwidth}\vspace{0pt}
+% photo is scaled to fit inside 0.45 x column width and 6cm height (no distortion)
+\IfFileExists{../photo/SIDDHARTHA_SHAKYA_PHOTO.jpeg}{{\centering\includegraphics[width=0.45\linewidth,height=6cm,keepaspectratio]{../photo/SIDDHARTHA_SHAKYA_PHOTO.jpeg}\par}}{}
 
-\personalinfo{%
-  \email{siddhuushakyaa@gmail.com} \\
-  \vspace{2pt}
-  \phone{+971 55 183 0660} \\
-  \vspace{2pt}
-  \location{Dubai, UAE} \\
-  \vspace{2pt}
-  \linkedin{sidshkya} \\
-  \vspace{2pt}
-  \github{SiddhuShkya} 
-}
+\cvsection{Contact}
+\cvcontact{MapMarker}{Dubai, UAE}
+\cvcontact{Whatsapp}{+971 55 183 0660}
+\cvcontact{Envelope}{\href{mailto:siddhuushakyaa@gmail.com}{siddhuushakyaa@gmail.com}}
+\cvcontact{Linkedin}{\href{https://www.linkedin.com/in/sidshkya}{linkedin.com/in/sidshkya}}
+\cvcontact{Github}{\href{https://github.com/SiddhuShkya}{github.com/SiddhuShkya}}
 
-\makecvheader
+\cvsection{Details}
+\cvdetail{Nationality}{Nepali}
+\cvdetail{Marital status}{Single}
+\cvdetail{Visa status}{Student Visa}
+\cvdetail{Class Time}{Evening ( 7:00 PM - 10:00 PM ) }
+\cvdetail{Visa Sponsorer}{Manipal University Dubai}
 
-\columnratio{0.6}
+\cvsection{Skills}
+\cvskill{Python}{Proficient}{0.95}
+\cvskill{Agentic AI \& Automation} {Expert}{0.85}
+\cvskill{SQL (PostgreSQL, MySQL)}{Expert}{0.90}
+\cvskill{NoSQL (MongoDB)}{Strong}{0.80}
+\cvskill{DevOps (Docker, Github)}{Strong}{0.80}
 
-\begin{paracol}{2}
+\cvsection{Languages}
+\cvpair{English}{Fluent}
+\cvpair{Nepali}{National}
+\cvpair{Hindi}{Conversational}
+
+\end{minipage}%
+\hspace{0.015\textwidth}%
+% ------------------------------ DIVIDER -------------------------------------
+\raisebox{-26.5cm}[0pt][0pt]{\textcolor{lightcol}{\rule{1.5pt}{26.5cm}}}%
+\hspace{0.015\textwidth}%
+% ------------------------------ RIGHT COLUMN --------------------------------
+\begin{minipage}[t]{0.6\textwidth}\vspace{0pt}
+\noindent\colorbox{darkcol}{\begin{minipage}[c][3.2cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+  \centering
+  {\huge\textbf{\textcolor{white}{SIDDHARTHA SHAKYA}}}\par\vspace{4pt}
+  \textcolor{white}{\rule{0.1\linewidth}{1.25pt}}\par\vspace{6pt}
+  {\large\textcolor{white}{Data Science \textbar{} Analyst \& Engineering}}
+\end{minipage}}
 
 \cvsection{Profile}
+\setlength{\emergencystretch}{5em}
+Quick learner and highly efficient \textbf{Computer Science graduate} specializing in Data Science, Agentic AI, and Automation. Proficient in building autonomous AI workflows, data engineering pipelines, and predictive models using Python, SQL and n8n. Proven ability to deliver data-driven solutions that create measurable business impact.
 
-\noindent \justifying
-\textbf{Computer Science graduate} specializing in \textbf{Data Science, Agentic AI, and Automation}. Proficient in building autonomous AI workflows, data engineering pipelines, and predictive models using \textbf{Python and SQL}. Proven ability to deliver data-driven solutions that create measurable business impact.
+\vspace{5pt}
+Seeking a Data Science role where I can apply my foundational skills, while remaining motivated to deepen my expertise in Agentic AI and Automation.
 
-\cvsection{Experience}
+\cvsection{Work \& Internships}
 
-\cvevent{Backend AI Engineer (Intern)}{FlyRank AI}{June 2026 -- Ongoing}{Dubai, UAE}
-\begin{itemize}
-\item Developed an AI usage-metering and billing engine in Node.js, enforcing subscription tier quotas and integrating Stripe webhooks. 
-\item Automated customer subscription lifecycles and usage reporting. 
-\end{itemize}
+\textbf{Backend AI Engineer Intern} \hfill \textbf{Jun 2026 -- Aug 2026} \\
+\textit{FlyRank AI}
+\vspace{3pt}
+\begin{cvbullets}
+  \item Built an agentic AI CV-screening automation and AI workflow that evaluates resumes against role-specific job descriptions, generates structured candidate scores and reviews, and alerts recruiters to top matches. 
+  \item Built a Node.js/Express and PostgreSQL billing backend with token metering, quotas, and Stripe integration.
+\end{cvbullets}
 
-\divider
+\vspace{6pt}
 
-\cvevent{AI \& Data Intern}{Mach24 Orbitals}{Oct 2025 -- Feb 2026}{Lalitpur, Nepal}
-\begin{itemize}
-\item Owned end-to-end data pipeline responsibility and processed over \textbf{1000+} satellite images/data.
-\item Automated ingestion, quality assurance, and normalization, achieving \textbf{83\%} data accuracy and reducing manual preprocessing time.
-\end{itemize}
+\textbf{AI Intern} \hfill \textbf{Oct 2025 -- Feb 2026} \\
+\textit{Mach24 Orbital}
+\vspace{3pt}
+\begin{cvbullets}
+  \item Owned end-to-end data pipeline responsibility and processed over 1000+ satellite images/data.
+  \item Automated ingestion, quality assurance, and normalization, achieving 83\% data accuracy and reducing manual preprocessing time.
+\end{cvbullets}
 
-\divider
+\vspace{6pt}
 
-\cvevent{Graduate Teaching Assistant}{Herald College Kathmandu}{Aug 2024 -- Sep 2025}{Kathmandu, Nepal}
-\begin{itemize}
-\item Architected and delivered High Performance Computing (HPC) workshops on parallel programming, C/C++, and CUDA GPU computing.
-\item built a password-cracking lab showcasing \textbf{6x speedup} via multithreading and \textbf{40x speedup} via CUDA over a single-core baseline.
-\end{itemize}
+\textbf{Graduate Assistant} \hfill \textbf{Aug 2024 -- Sep 2025} \\
+\textit{Herald College Kathmandu}
+\vspace{3pt}
+\begin{cvbullets}
+  \item Managed and assisted daily classroom operations for large student cohorts in fast-paced workshop settings.
+  \item Communicated technical and operational guidelines clearly to ensure accurate task execution.
+\end{cvbullets}
+
+\cvsection{Certifications}
+
+\textbf{AI Fluency: Frameworks \& Foundations} \hfill \textbf{2026} \\
+Anthropic Academy
+
+\vspace{4pt}
+
+\textbf{Mastering System Design} \hfill \textbf{2026} \\
+Udemy
+
+\vspace{4pt}
+
+\textbf{MLOps Bootcamp} \hfill \textbf{2025} \\
+Udemy
 
 \cvsection{Education}
 
-\cvevent{PG Diploma in Data Science}{Manipal Academy of Higher Education}{Feb 2026 -- present}{Dubai, UAE}
+\textbf{PG Diploma in Data Science} \hfill \textbf{Feb 2026 -- Present} \\
+Manipal University Dubai \hfill \textit{Ongoing}
 
-\divider
+\vspace{4pt}
 
-\cvevent{BSc (Hons) Computer Science}{Herald College Kathmandu}{Feb 2022 -- June 2024}{Kathmandu, Nepal}
+\textbf{BSc (Hons) in Computer Science} \hfill \textbf{Feb 2022 -- Jun 2024} \\
+University of Wolverhampton \hfill \textit{First Class Honors}
 
-\switchcolumn
-
-\cvsection{Strengths}
-
-\cvtag{Problem-Solving}
-\cvtag{Teamwork \& Collaboration} \\
-\cvtag{Time Management} 
-\cvtag{Strong Communication} \\
-\cvtag{Fast \& Accurate Typing}
-\cvtag{Presentation} \\
-
-\cvtag{Attention to Detail}
-
-\cvsection{Technical Skills}
-
-\cvtag{Python}
-\cvtag{SQL}
-\cvtag{n8n}
-\cvtag{NoSQL}
-\vspace{3pt}
-\cvtag{Linux} \\
-\cvtag{Git}
-\cvtag{GitHub}
-\cvtag{Docker} 
-\vspace{3pt}
-\cvtag{MS Office} \\
-\cvtag{Troubleshooting}
-\cvtag{Networking}
-
-\cvsection{Languages}
-
-\cvskill{English}{5}
-\divider
-\cvskill{Nepali}{5}
-\divider
-\cvskill{Hindi}{4}
-
-\cvsection{Achievements}
-
-\cvachievement{\faTrophy}{AAA Scholarship}{Excellence in Academics, Attitude \& Attendance}
-
-\divider
-
-\cvachievement{\faGraduationCap}{First Class Honors}{Consistent academic performance}
-
-\cvsection{Additional Info}
-
-\begin{itemize}
-\item \textbf{Nationality:} Nepali
-\item \textbf{Marital Status:} Single
-\item \textbf{Visa:} Student Visa
-\item \textbf{Visa Sponsorer:} Manipal Academy of Higher Education
-\item \textbf{Class Schedule:} 7:00 PM - 10:00 PM
-\item \textbf{Availability:} Immediately
-\item \textbf{Typing Speed:} 50-55 WPM
-\end{itemize}
-
-\end{paracol}
-
+\end{minipage}
 \end{document}
