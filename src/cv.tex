@@ -7,9 +7,9 @@
 %============================================================================%
 \documentclass[10.5pt,a4paper]{article}
 
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}            % Latin Modern = sharper Computer Modern
+\usepackage[scaled=0.92]{helvet}      % Helvetica, an Arial look-alike
+\renewcommand{\familydefault}{\sfdefault}
 % No \sfdefault: the serif Computer Modern Roman is the default text font
 \usepackage{moresize}
 \usepackage{fontawesome}
@@ -49,7 +49,7 @@
 
 % skill with bar: name, level label, fill 0..1
 \newcommand{\cvskill}[3]{%
-  \noindent\textbf{#1}\hfill\textcolor{maincol}{\small #2}\par\vspace{2pt}%
+  \noindent #1\hfill\textcolor{maincol}{\small #2}\par\vspace{2pt}%
   \noindent\textcolor{lightcol}{\rule{\linewidth}{3pt}}\hspace{-\linewidth}%
   \textcolor{maincol}{\rule{#3\linewidth}{3pt}}\par\vspace{5pt}}
 
@@ -82,7 +82,7 @@
 \cvcontact{Linkedin}{\href{https://www.linkedin.com/in/sidshkya}{linkedin.com/in/sidshkya}}
 \cvcontact{Github}{\href{https://github.com/SiddhuShkya}{github.com/SiddhuShkya}}
 
-\cvsection{Details}
+\cvsection{Additional Details}
 \cvdetail{Nationality}{Nepali}
 \cvdetail{Marital status}{Single}
 \cvdetail{Visa status}{Student Visa}
@@ -112,7 +112,7 @@
   \centering
   {\huge\textbf{\textcolor{white}{SIDDHARTHA SHAKYA}}}\par\vspace{4pt}
   \textcolor{white}{\rule{0.1\linewidth}{1.25pt}}\par\vspace{6pt}
-  {\large\textcolor{white}{Data Science \textbar{} Analyst \& Engineering}}
+  {\large\textcolor{white}{Data Scientist \textbar{} Agentic AI \& Automation}}
 \end{minipage}}
 
 \cvsection{Profile}
@@ -175,7 +175,7 @@ Manipal University Dubai \hfill \textit{Ongoing}
 \vspace{4pt}
 
 \textbf{BSc (Hons) in Computer Science} \hfill \textbf{Feb 2022 -- Jun 2024} \\
-University of Wolverhampton \hfill \textit{First Class Honors}
+Herald College Kathmandu \hfill \textit{First Class Honors}
 
 \end{minipage}
 \end{document}
